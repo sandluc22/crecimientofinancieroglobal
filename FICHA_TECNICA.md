@@ -82,10 +82,10 @@
 
 | Elemento | Estado | Notas |
 |---|---|---|
-| **Google Search Console** | ❌ Pendiente | Verificar dominio |
-| **Sitemap.xml** | ❌ Pendiente | Crear |
-| **Robots.txt** | ❌ Pendiente | Crear |
-| **Google Analytics** | ❌ Pendiente | Instalar |
+| **Google Search Console** | ✅ Verificado | Propiedad verificada + sitemap enviado |
+| **Sitemap.xml** | ✅ Creado | 30+ URLs, enviado a Google |
+| **Robots.txt** | ✅ Creado | Rastreo permitido |
+| **Google Analytics** | ✅ GA4 Instalado | ID G-XVVBY349WZ |
 | **Meta tags SEO** | ✅ | Titles, descriptions, canonical |
 | **Open Graph** | ✅ | Facebook, Twitter, Telegram |
 | **URLs amigables** | ✅ | Sin parámetros, limpias |
@@ -122,17 +122,17 @@
 |---|---|---|
 | **Aviso Legal** | /legal/aviso-legal.html | ✅ |
 | **Política de Privacidad** | /legal/politica-privacidad.html | ✅ |
-| **Política de Cookies** | ❌ Pendiente | Opcional |
+| **Política de Cookies** | ❌ Pendiente | Opcional (no necesita aviso de cookies si solo GA4 analítico) |
 
 ---
 
 ## 8. PENDIENTES TÉCNICOS (priorizados)
 
 ### 🔴 Urgente (antes de la revisión)
-1. Verificar dominio en **Google Search Console**
-2. Crear **sitemap.xml**
-3. Crear **robots.txt**
-4. Instalar **Google Analytics** o similar
+1. ✅ Google Search Console — verificado
+2. ✅ Sitemap.xml — creado y enviado
+3. ✅ Robots.txt — creado
+4. ✅ Google Analytics — instalado
 
 ### 🟡 Importante (a corto plazo)
 5. Colocar enlaces de afiliados cuando se activen los programas
