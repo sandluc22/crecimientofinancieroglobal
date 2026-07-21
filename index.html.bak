@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crecimiento Financiero Global · Todo lo que necesitas para crecer y disfrutar</title>
+  <meta name="description" content="Crecimiento Financiero Global: productos financieros, hipotecas, seguros, coches, viajes y formación. Todo lo que necesitas para crecer y disfrutar, en un solo lugar." />
+  <link rel="canonical" href="https://crecimientofinancieroglobal.com/" />
+  <meta property="og:title" content="Crecimiento Financiero Global · Todo lo que necesitas para crecer y disfrutar" />
+  <meta property="og:description" content="Productos financieros, hipotecas, seguros, coches, viajes y formación. Todo lo que necesitas para crecer y disfrutar." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#1e3a5f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #1a1a2e; background: #f8fafc; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    header { background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 20px 0; position: sticky; top: 0; z-index: 100; }
+    header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+    .logo { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.5px; }
+    .logo span { color: #f5a623; }
+    nav { display: flex; gap: 10px; flex-wrap: wrap; }
+    nav a { color: rgba(255,255,255,0.85); padding: 8px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 500; transition: all 0.2s; }
+    nav a:hover { background: rgba(255,255,255,0.12); color: white; }
+    .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 50%, #1a5276 100%); color: white; padding: 80px 0 60px; text-align: center; }
+    .hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
+    .hero h1 span { color: #f5a623; }
+    .hero p { font-size: 1.15rem; opacity: 0.9; max-width: 650px; margin: 0 auto 30px; }
+    .hero .tagline { font-size: 1.4rem; font-weight: 600; color: #f5a623; margin-bottom: 10px; }
+    .hero-btn { display: inline-block; background: #f5a623; color: #1e3a5f; padding: 14px 36px; border-radius: 50px; font-weight: 700; font-size: 1rem; transition: all 0.3s; }
+    .hero-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(245,166,35,0.3); }
+    .badge { display: inline-block; background: #fef3c7; color: #92400e; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+    .badge-green { background: #d1fae5; color: #065f46; }
+
+    /* Secciones */
+    section { padding: 60px 0; }
+    section:nth-child(even) { background: white; }
+    .section-title { font-size: 1.8rem; font-weight: 700; text-align: center; margin-bottom: 40px; color: #1e3a5f; }
+    .section-subtitle { text-align: center; color: #64748b; margin-bottom: 40px; font-size: 1rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+    /* Grid de categorías */
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .cat-card { background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; border: 1px solid #eef2f6; }
+    .cat-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); border-color: #f5a623; }
+    .cat-icon { font-size: 2.5rem; margin-bottom: 16px; }
+    .cat-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: #1e3a5f; }
+    .cat-card p { font-size: 0.9rem; color: #64748b; margin-bottom: 16px; }
+    .cat-card .cta { color: #f5a623; font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 5px; }
+    .cat-card .cta:hover { gap: 8px; }
+    .coming-soon { display: inline-block; background: #fef3c7; color: #92400e; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+
+    /* Sobre mí */
+    .about { background: #f0f4f8; }
+    .about-content { max-width: 800px; margin: 0 auto; text-align: center; }
+    .about-content p { color: #475569; margin-bottom: 16px; }
+
+    /* Blog preview */
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .blog-card { background: white; border-radius: 12px; padding: 24px; border: 1px solid #eef2f6; }
+    .blog-card h4 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; color: #1e3a5f; }
+    .blog-card p { font-size: 0.85rem; color: #64748b; margin-bottom: 12px; }
+    .blog-card .date { font-size: 0.75rem; color: #94a3b8; }
+
+    /* Footer */
+    footer { background: #1e3a5f; color: rgba(255,255,255,0.7); padding: 40px 0; text-align: center; font-size: 0.85rem; }
+    footer a { color: #f5a623; }
+    footer .social { margin: 16px 0; display: flex; justify-content: center; gap: 16px; }
+    footer .social a { color: rgba(255,255,255,0.6); font-size: 0.85rem; padding: 6px 12px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.15); transition: all 0.2s; }
+    footer .social a:hover { color: white; border-color: #f5a623; }
+
+    @media (max-width: 768px) {
+      nav { display: none; width: 100%; flex-direction: column; }
+      nav.show { display: flex; }
+      .menu-toggle { display: block; }
+      .hero h1 { font-size: 1.8rem; }
+      .hero .tagline { font-size: 1.1rem; }
+      .section-title { font-size: 1.4rem; }
+      .cat-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">📈 CFG <span>Global</span></div>
+    <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('show')">☰</button>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/productos-financieros/">Financieros</a>
+      <a href="/hipotecas/">Hipotecas</a>
+      <a href="/seguros/">Seguros</a>
+      <a href="/coches/">Coches</a>
+      <a href="/viajes/">Viajes</a>
+      <a href="/formacion/">Formación</a>
+      <a href="/#blog">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <p class="tagline">🌱 Todo lo que necesitas para crecer y disfrutar</p>
+    <!-- <h1>Crecimiento <span>Financiero</span> Global</h1> -->
+    <p>Productos financieros, hipotecas, seguros, coches, viajes y formación. Te ayudamos a encontrar las mejores opciones para cada paso de tu vida.</p>
+    <a href="#financieros" class="hero-btn">Explorar rutas de crecimiento ↓</a>
+  </div>
+</section>
+
+<!-- Productos Financieros -->
+<section id="financieros">
+  <div class="container">
+    <h2 class="section-title">💰 Productos Financieros</h2>
+    <p class="section-subtitle">Cuentas, depósitos, inversiones y todo lo que tu dinero necesita para trabajar por ti.</p>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <div class="cat-icon">🏦</div>
+        <h3>Cuentas y Depósitos</h3>
+        <p>Las mejores cuentas remuneradas y depósitos a plazo del mercado. Compara y elige la que más rentabilidad te dé.</p>
+        <a href="/productos-financieros/cuentas-remuneradas.html" class="cta">Ver guía →</a>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">📊</div>
+        <h3>Inversiones</h3>
+        <p>Fondos de inversión, planes de pensiones, ETFs. Empieza a invertir desde cero con las mejores plataformas.</p>
+        <a href="/productos-financieros/ahorro-inversion.html" class="cta">Ver guía →</a>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">🏆</div>
+        <h3>Comparativas</h3>
+        <p>Comparamos los mejores productos financieros del mercado para que elijas el que más se adapta a ti.</p>
+        <a href="/productos-financieros/" class="cta">Ver más →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hipotecas -->
+<section id="hipotecas">
+  <div class="container">
+    <h2 class="section-title">🏡 Hipotecas</h2>
+    <p class="section-subtitle">Compra tu vivienda con las mejores condiciones. Te ayudamos a encontrar la hipoteca ideal.</p>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <div class="cat-icon">🔑</div>
+        <h3>Hipotecas para tu casa</h3>
+        <p>Hipoteca fija, variable o mixta. Compara bancos y elige la que mejor se ajuste a tu bolsillo.</p>
+        <a href="/hipotecas/" class="cta">Ver más →</a>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">📋</div>
+        <h3>Simuladores</h3>
+        <p>Calcula tu cuota mensual, lo que pagarás en total y qué banco te da las mejores condiciones.</p>
+        <a href="/hipotecas/fija-vs-variable.html" class="cta">Ver guía →</a>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">💡</div>
+        <h3>Guía para primerizos</h3>
+        <p>Todo lo que necesitas saber antes de pedir una hipoteca: gastos, requisitos, consejos clave.</p>
+        <a href="/hipotecas/" class="cta">Ver más →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seguros -->
+<section id="seguros">
+  <div class="container">
+    <h2 class="section-title">🛡️ Seguros</h2>
+    <p class="section-subtitle">Protege lo que más importa. Seguros de vida, salud, hogar y empresas con Grupo Galilea.</p>
+    <div class="cat-grid">
+      <a href="/seguro-vida/" class="cat-card">
+        <div class="cat-icon">❤️</div>
+        <h3>Seguro de Vida</h3>
+        <p>Protege a tu familia ante cualquier imprevisto. Desde 5€/mes.</p>
+        <span class="cta">Más información →</span>
+      </a>
+      <a href="/seguro-salud/" class="cat-card">
+        <div class="cat-icon">🏥</div>
+        <h3>Seguro de Salud</h3>
+        <p>Accede a las mejores clínicas y médicos sin listas de espera.</p>
+        <span class="cta">Más información →</span>
+      </a>
+      <a href="/seguro-hogar/" class="cat-card">
+        <div class="cat-icon">🏠</div>
+        <h3>Seguro de Hogar</h3>
+        <p>Tu casa protegida al mejor precio. Robo, incendios, daños eléctricos...</p>
+        <span class="cta">Más información →</span>
+      </a>
+      <a href="/seguro-empresas/" class="cat-card">
+        <div class="cat-icon">🏢</div>
+        <h3>Seguros para Empresas</h3>
+        <p>Protege tu negocio con las coberturas que realmente necesitas.</p>
+        <span class="cta">Más información →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Coches -->
+<section id="coches">
+  <div class="container">
+    <h2 class="section-title">🚗 Coches</h2>
+    <p class="section-subtitle">Alquiler y compra de vehículos. Encuentra el coche perfecto para ti.</p>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <div class="cat-icon">🔑</div>
+        <h3>Alquiler de Coches</h3>
+        <p>Compara precios entre todas las compañías de alquiler. El mejor coche al mejor precio.</p>
+        <a href="/coches/alquiler-coches.html" class="cta">Ver guía →</a>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">🛒</div>
+        <h3>Compra de Vehículos</h3>
+        <p>Coches nuevos y de segunda mano. Encuentra tu próximo coche con las mejores ofertas.</p>
+        <a href="/coches/" class="cta">Ver más →</a>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">📄</div>
+        <h3>Seguro de Coche</h3>
+        <p>Compara seguros de coche y elige la cobertura que necesitas al mejor precio.</p>
+        <a href="/coches/seguro-coche.html" class="cta">Ver guía →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Viajes -->
+<section id="viajes">
+  <div class="container">
+    <h2 class="section-title">✈️ Viajes</h2>
+    <p class="section-subtitle">Los mejores destinos, vuelos, hoteles y alquiler de coches para tus vacaciones.</p>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <div class="cat-icon">🌍</div>
+        <h3>Vuelos y Hoteles</h3>
+        <p>Encuentra las mejores ofertas en vuelos y alojamiento para tu próximo viaje.</p>
+        <a href="/viajes/vuelos-baratos.html" class="cta">Ver guía →</a>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">🚐</div>
+        <h3>Alquiler de Coches Viaje</h3>
+        <p>Recoge tu coche en el aeropuerto o ciudad de destino. Compara precios al instante.</p>
+        <a href="/viajes/" class="cta">Ver más →</a>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">🏖️</div>
+        <h3>Guías de Viaje</h3>
+        <p>Consejos, destinos recomendados y todo lo que necesitas para viajar mejor y más barato.</p>
+        <a href="/viajes/" class="cta">Ver más →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Formación -->
+<section id="formacion">
+  <div class="container">
+    <h2 class="section-title">📚 Formación</h2>
+    <p class="section-subtitle">Cursos, libros y recursos para seguir creciendo profesional y personalmente.</p>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <div class="cat-icon">🎓</div>
+        <h3>Cursos Online</h3>
+        <p>Los mejores cursos de finanzas, contabilidad, marketing y desarrollo personal.</p>
+        <a href="/formacion/cursos-finanzas.html" class="cta">Ver guía →</a>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">📖</div>
+        <h3>Libros Recomendados</h3>
+        <p>Libros que te ayudarán a crecer financiera y personalmente. Lecturas imprescindibles.</p>
+        <a href="/formacion/" class="cta">Ver más →</a>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">💼</div>
+        <h3>Membresías y Herramientas</h3>
+        <p>Plataformas y recursos premium para llevar tu crecimiento al siguiente nivel.</p>
+        <a href="/formacion/" class="cta">Ver más →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog preview -->
+<section>
+  <div class="container">
+    <h2 class="section-title">📂 Explora por categorías</h2>
+    <div class="blog-grid">
+      <a href="/productos-financieros/" class="blog-card">
+        <div class="cat-icon">🏦</div>
+        <h4>Productos Financieros</h4>
+        <p>Cuentas remuneradas, tarjetas, depósitos y ahorro e inversión desde cero.</p>
+        <span class="date">Ver contenido →</span>
+      </a>
+      <a href="/hipotecas/" class="blog-card">
+        <div class="cat-icon">🏠</div>
+        <h4>Hipotecas</h4>
+        <p>Hipotecas fijas, variables, mixtas y todo lo que necesitas saber para comprar tu vivienda.</p>
+        <span class="date">Ver contenido →</span>
+      </a>
+      <a href="/seguros/" class="blog-card">
+        <div class="cat-icon">🛡️</div>
+        <h4>Seguros</h4>
+        <p>Guías de seguros de salud, vida y protección para ti y tu familia.</p>
+        <span class="date">Ver contenido →</span>
+      </a>
+      <a href="/coches/" class="blog-card">
+        <div class="cat-icon">🚗</div>
+        <h4>Coches</h4>
+        <p>Alquiler de coches y seguros. Consejos prácticos para moverte.</p>
+        <span class="date">Ver contenido →</span>
+      </a>
+      <a href="/viajes/" class="blog-card">
+        <div class="cat-icon">✈️</div>
+        <h4>Viajes</h4>
+        <p>Trucos para vuelos baratos y todo lo que necesitas para viajar más gastando menos.</p>
+        <span class="date">Ver contenido →</span>
+      </a>
+      <a href="/formacion/" class="blog-card">
+        <div class="cat-icon">📚</div>
+        <h4>Formación Financiera</h4>
+        <p>Cursos y recursos online para mejorar tu educación financiera.</p>
+        <span class="date">Ver contenido →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Sobre mí -->
+<section class="about" id="contacto">
+  <div class="container">
+    <div class="about-content">
+      <h2 class="section-title">👋 ¿Quieres crecer con nosotros?</h2>
+      <p>Soy Sandra Caicedo, agente de Grupo Galilea en Madrid. Mi objetivo es ayudarte a encontrar los mejores productos financieros, seguros, hipotecas y recursos para que tú y tu familia crezcáis.</p>
+      <p>📩 <strong>info@crecimientofinancieroglobal.com</strong></p>
+      <p style="margin-top:20px;">
+        <a href="https://cfg-seguros.com" style="color:#1e3a5f;text-decoration:underline;">Visita también cfg-seguros.com</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Crecimiento Financiero Global · Sandra Caicedo · Grupo Galilea</p>
+    <div class="social">
+      <a href="https://cfg-seguros.com" target="_blank">cfg-seguros.com</a>
+    </div>
+    <p>© 2026 Crecimiento Financiero Global · Madrid, España</p>
+  </div>
+</footer>
+
+</body>
+</html>
