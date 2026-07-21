@@ -1,4 +1,7 @@
+# robots.txt - Crecimiento Financiero Global
+# Permitir rastreo completo a todos los motores
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://crecimientofinancieroglobal.com/sitemap.xml
