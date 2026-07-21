@@ -157,3 +157,21 @@
 ---
 
 *Ficha actualizada: 21 julio 2026*
+
+## 7. MATERIAL AUDIOVISUAL
+
+### Vídeos con movimiento real (Pexels + ffmpeg)
+
+| Tema | Texto en vídeo | Archivo | Estado |
+|---|---|---|---|
+| Ahorro | "AHORRA CON INTELIGENCIA" | final_ahorro.mp4 | ✅ |
+| Inversiones | "INVIERTE CON CONFIANZA" | final_inversiones.mp4 | ✅ |
+| Viajes | "VIAJA TRANQUILO" | final_viajes.mp4 | ✅ |
+| Estudios | "ESTUDIA EN ESPANA" | PENDIENTE | ❌ Foto sin elegir |
+
+**Formato:** 720×1280 (9:16), 7-10s, H.264
+**Texto:** Blanco 44px con borde negro 4px, centrado arriba
+**Dominio:** ❌ No va en pantalla — va en la descripción del post
+**Ubicación:** `/home/node/workspace/videos-con-movimiento/`
+**Script:** `/home/node/workspace/diseño-y-video/generar_videos_movimiento.py`
+**Ficha herramientas:** `/home/node/workspace/diseño-y-video/FICHA_HERRAMIENTAS.md`
