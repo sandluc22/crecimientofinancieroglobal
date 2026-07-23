@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio — Asesoría para Estudiar en España</title>
+<style>
+  @page { margin: 20mm 15mm; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter','Segoe UI',sans-serif;color:#1e293b;line-height:1.6;background:white}
+  .page{max-width:800px;margin:0 auto;padding:40px 30px}
+  
+  /* Cover */
+  .cover{text-align:center;padding:60px 0 40px;border-bottom:4px solid #f5a623}
+  .cover h1{font-size:36px;color:#1e3a5f;margin-bottom:8px}
+  .cover h1 span{color:#f5a623}
+  .cover p{font-size:18px;color:#475569;margin-bottom:20px}
+  .cover-logo{font-size:48px;margin-bottom:16px}
+
+  /* Section titles */
+  h2{font-size:22px;color:#1e3a5f;border-bottom:3px solid #f5a623;padding-bottom:6px;margin:36px 0 20px}
+  h3{font-size:16px;color:#2563eb;margin:20px 0 8px}
+
+  /* Services */
+  .service-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+  .service-item{background:#f8fafc;border-left:4px solid #2563eb;padding:12px 16px;border-radius:0 8px 8px 0}
+  .service-item strong{display:block;font-size:14px;color:#1e3a5f}
+  .service-item p{font-size:13px;color:#475569;margin:4px 0 0}
+
+  /* Table */
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+  th{background:#1e3a5f;color:white;padding:10px 14px;text-align:left}
+  td{padding:10px 14px;border-bottom:1px solid #e2e8f0}
+  tr:nth-child(even){background:#f8fafc}
+  .highlight{background:#ecfdf5}
+  .highlight td{font-weight:600}
+  .free{color:#059669;font-weight:600}
+
+  /* Stats bar */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:24px 0;text-align:center}
+  .stat{background:#f8fafc;border-radius:8px;padding:16px}
+  .stat .num{font-size:28px;font-weight:800;color:#f5a623}
+  .stat .label{font-size:12px;color:#64748b;margin-top:4px}
+
+  /* Steps */
+  .steps{list-style:none;padding:0;margin:16px 0}
+  .steps li{display:flex;gap:14px;padding:14px 16px;margin-bottom:10px;background:#f8fafc;border-radius:8px;align-items:flex-start}
+  .step-num{background:#2563eb;color:white;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;margin-top:2px}
+  .steps li div p{margin:4px 0 0;font-size:13px;color:#475569}
+
+  .contact-box{background:#1e3a5f;color:white;border-radius:12px;padding:30px;text-align:center;margin:32px 0}
+  .contact-box h3{color:#f5a623;border:none;margin:0 0 12px;font-size:20px}
+  .contact-box p{opacity:.9;margin-bottom:6px;font-size:15px}
+
+  .footer{text-align:center;font-size:12px;color:#94a3b8;margin-top:40px;padding-top:20px;border-top:1px solid #e2e8f0}
+
+  @media print {
+    .page{padding:0}
+    body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page">
+
+  <!-- PORTADA -->
+  <div class="cover">
+    <div class="cover-logo">🎓🇪🇸</div>
+    <h1>Crecimiento <span>Financiero</span> Global</h1>
+    <p style="font-size:16px;color:#64748b;">Asesoría para Estudiar en España</p>
+    <p style="font-size:15px;max-width:500px;margin:16px auto 0;color:#475569;">Acompañamiento completo para estudiantes colombianos que quieren cumplir el sueño de estudiar en España. Desde la homologación hasta la llegada.</p>
+  </div>
+
+  <!-- ¿POR QUÉ NOSOTROS? -->
+  <h2>¿Por qué nosotros?</h2>
+  <div class="stats">
+    <div class="stat"><div class="num">95%</div><div class="label">Visados aprobados</div></div>
+    <div class="stat"><div class="num">50+</div><div class="label">Estudiantes</div></div>
+    <div class="stat"><div class="num">3-6</div><div class="label">Meses de proceso</div></div>
+    <div class="stat"><div class="num">🇨🇴→🇪🇸</div><div class="label">Colombia a España</div></div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <h2>Servicios incluidos</h2>
+  <div class="service-grid">
+    <div class="service-item"><strong>📜 Homologación de títulos</strong><p>Gestionamos la convalidación de tu título colombiano ante el Ministerio de Educación de España.</p></div>
+    <div class="service-item"><strong>🛂 Visado de estudiante</strong><p>Preparamos y revisamos toda la documentación para minimizar el riesgo de rechazo.</p></div>
+    <div class="service-item"><strong>🏠 Búsqueda de alojamiento</strong><p>Te encontramos piso compartido, residencia o estudio en tu ciudad de destino y presupuesto.</p></div>
+    <div class="service-item"><strong>🏥 Seguro médico</strong><p>Contratamos el seguro que cumple los requisitos del visado. Sin coste de gestión adicional.</p></div>
+    <div class="service-item"><strong>💳 Cuenta bancaria</strong><p>Apertura de cuenta desde Colombia para que tengas tu dinero disponible al llegar.</p></div>
+    <div class="service-item"><strong>🤝 Acompañamiento</strong><p>Te ayudamos con el empadronamiento, el TIE y cualquier duda durante tus primeros meses.</p></div>
+  </div>
+
+  <!-- PAQUETES Y PRECIOS -->
+  <h2>Paquetes y precios</h2>
+  <table>
+    <tr><th>Servicio</th><th>Precio</th></tr>
+    <tr><td>🆓 Consulta inicial</td><td class="free">GRATIS</td></tr>
+    <tr><td>📜 Homologación de título</td><td>200-350€</td></tr>
+    <tr><td>🛂 Gestión de visado</td><td>250-400€</td></tr>
+    <tr><td>🏠 Búsqueda de alojamiento</td><td>150-250€</td></tr>
+    <tr><td>🏥 Seguro médico</td><td>Sin coste de gestión</td></tr>
+    <tr><td>💳 Cuenta bancaria</td><td>Sin coste de gestión</td></tr>
+    <tr class="highlight"><td>📦 Pack completo «Estudia en España»</td><td><strong>600-900€</strong></td></tr>
+    <tr class="highlight"><td>🚀 Pack básico (visado + seguro)</td><td><strong>300-500€</strong></td></tr>
+  </table>
+  <p style="font-size:13px;color:#64748b;margin-top:8px;">* Precios orientativos. Cada caso se presupuesta individualmente.</p>
+  <p style="font-size:13px;color:#64748b;">** El pack completo incluye homologación + visado + alojamiento + seguro + cuenta bancaria.</p>
+
+  <!-- CÓMO FUNCIONA -->
+  <h2>Cómo funciona</h2>
+  <ol class="steps">
+    <li><span class="step-num">1</span><div><strong>Consulta gratuita</strong><p>Nos cuentas tu situación y te damos un plan personalizado sin compromiso.</p></div></li>
+    <li><span class="step-num">2</span><div><strong>Aceptas el plan</strong><p>Confirmas los servicios y empezamos con la documentación.</p></div></li>
+    <li><span class="step-num">3</span><div><strong>Ejecutamos todo</strong><p>Homologación, visado, seguro, alojamiento y banco. Todo en paralelo para ahorrar tiempo.</p></div></li>
+    <li><span class="step-num">4</span><div><strong>Llegas a España</strong><p>Con todo listo: piso, banco, seguro. Solo te preocupas de estudiar.</p></div></li>
+  </ol>
+
+  <!-- CONTACTO -->
+  <div class="contact-box">
+    <h3>¿Listo para empezar?</h3>
+    <p>📧 info@crecimientofinancieroglobal.com</p>
+    <p>📱 WhatsApp: +34 600 000 000</p>
+    <p>🌐 crecimientofinancieroglobal.com/estudiar-espana/</p>
+    <p style="margin-top:12px;font-size:13px;">Primera consulta gratuita · Sin compromiso</p>
+  </div>
+
+  <div class="footer">
+    <p><strong>Crecimiento Financiero Global</strong> — España · Colombia</p>
+    <p>Contenido informativo. Consulta siempre con profesionales homologados para tu caso concreto.</p>
+  </div>
+
+</div>
+</body>
+</html>
