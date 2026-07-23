@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crecimiento Financiero Global — Todo lo que necesitas para crecer y disfrutar</title>
+  <meta name="description" content="Productos financieros, hipotecas, seguros, coches, viajes, formación y estudios en España. Te ayudamos a encontrar las mejores opciones para cada paso de tu vida." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Crecimiento Financiero Global — Todo lo que necesitas para crecer y disfrutar" />
+  <meta property="og:description" content="Productos financieros, hipotecas, seguros, viajes, coches, formación y estudios en España. Crece financieramente y disfruta de la vida." />
+  <meta property="og:url" content="https://crecimientofinancieroglobal.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://crecimientofinancieroglobal.com/logo-cfg.png" />
+  <meta property="og:site_name" content="Crecimiento Financiero Global" />
+  <meta property="og:locale" content="es_ES" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Crecimiento Financiero Global — Todo lo que necesitas para crecer y disfrutar" />
+  <meta name="twitter:description" content="Productos financieros, hipotecas, seguros, viajes, coches, formación y estudios en España." />
+  <link rel="canonical" href="https://crecimientofinancieroglobal.com/" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XVVBY349WZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XVVBY349WZ');
+  </script>
+  <link rel="alternate" hreflang="es" href="https://crecimientofinancieroglobal.com/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;color:#1e293b;background:#fff;line-height:1.7}
+    .container{max-width:1100px;margin:0 auto;padding:0 24px}
+    a{color:#2563eb;text-decoration:none;transition:.2s}
+
+    /* HEADER */
+    header{background:#fff;border-bottom:1px solid #e2e8f0;padding:12px 0;position:sticky;top:0;z-index:100}
+    header .container{display:flex;justify-content:space-between;align-items:center}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo img{height:38px;width:auto}
+    header nav{display:flex;gap:20px}
+    header nav a{font-size:.85rem;color:#475569;font-weight:500}
+    header nav a:hover{color:#1e3a5f}
+
+    /* HERO */
+    .hero{background:linear-gradient(135deg,#1c3858 0%,#264d7a 50%,#1e6b8a 100%);color:#fff;padding:80px 20px 70px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,.04)}
+    .hero::after{content:"";position:absolute;bottom:-60px;left:-60px;width:200px;height:200px;border-radius:50%;background:rgba(245,166,35,.06)}
+    .hero .tagline{font-size:1.25rem;color:#f5a623;font-weight:600;margin-bottom:16px;letter-spacing:.01em}
+    .hero h1{font-size:2.4rem;font-weight:800;max-width:700px;margin:0 auto 14px;line-height:1.25}
+    .hero p{font-size:1.1rem;opacity:.85;max-width:640px;margin:0 auto 32px}
+    .hero .btn{display:inline-block;background:#f5a623;color:#1e3a5f;padding:16px 36px;border-radius:8px;font-weight:700;font-size:1rem;transition:.2s;position:relative;z-index:1}
+    .hero .btn:hover{background:#e6951a;transform:translateY(-2px);text-decoration:none}
+
+    /* SECTION TITLE */
+    .section-header{text-align:center;margin:50px 0 40px}
+    .section-header h2{font-size:1.6rem;font-weight:700;color:#1e3a5f;margin-bottom:10px}
+    .section-header p{color:#64748b;font-size:.95rem;max-width:550px;margin:0 auto}
+
+    /* CATEGORY ROW — diseño tipo lista, no cuadrícula */
+    .cat{background:#fff;border-radius:14px;margin-bottom:28px;overflow:hidden;border:1px solid #e2e8f0;transition:.2s}
+    .cat:hover{border-color:#cbd5e1;box-shadow:0 4px 24px rgba(30,58,95,.06)}
+    .cat-bar{display:flex;align-items:center;gap:14px;padding:20px 24px;background:#f8fafc;border-bottom:1px solid #e2e8f0}
+    .cat-bar .icon{font-size:1.5rem}
+    .cat-bar .cname{flex:1}
+    .cat-bar .cname h3{font-size:1.1rem;font-weight:700;color:#1e3a5f}
+    .cat-bar .cname p{font-size:.85rem;color:#64748b;margin-top:2px}
+    .cat-bar .arrow{color:#94a3b8;font-size:.85rem;transition:.2s}
+    .cat:hover .cat-bar .arrow{color:#2563eb;transform:translateX(3px)}
+
+    /* SUBPÁGINAS estilo lista en lugar de tarjetas */
+    .sub-list{list-style:none;padding:16px 24px}
+    .sub-list li{border-bottom:1px solid #f1f5f9;padding:14px 0}
+    .sub-list li:last-child{border-bottom:none}
+    .sub-list a{display:flex;align-items:center;gap:12px;color:#334155;transition:.2s}
+    .sub-list a:hover{color:#1e3a5f}
+    .sub-list .emoji{font-size:1.2rem;flex-shrink:0;width:30px;text-align:center}
+    .sub-list .sinfo{flex:1}
+    .sub-list .sinfo strong{font-size:.92rem;font-weight:600;color:#1e3a5f;display:block}
+    .sub-list .sinfo span{font-size:.82rem;color:#64748b}
+    .sub-list .slink{font-size:.8rem;font-weight:600;color:#2563eb;flex-shrink:0}
+
+    /* CONTACTO */
+    .about{background:#f1f5f9;padding:55px 24px;text-align:center}
+    .about .container{max-width:600px}
+    .about h2{font-size:1.4rem;font-weight:700;color:#1e3a5f;margin-bottom:16px}
+    .about p{font-size:.95rem;color:#475569;margin-bottom:20px;line-height:1.6}
+    .about .email{font-size:1rem;font-weight:600;color:#1e3a5f;display:inline-block;margin-bottom:14px}
+    .about .email:hover{color:#2563eb;text-decoration:underline}
+    .about .links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;font-size:.85rem}
+    .about .links a{color:#64748b}
+    .about .links a:hover{color:#1e3a5f}
+
+    /* FOOTER */
+    footer{background:#1e293b;color:#94a3b8;text-align:center;padding:28px 24px;font-size:.82rem}
+    footer a{color:#94a3b8}
+    footer a:hover{color:#fff}
+
+    /* RESPONSIVE */
+    @media(max-width:700px){
+      .hero h1{font-size:1.5rem}
+      .hero .tagline{font-size:1rem}
+      .hero{padding:60px 16px 50px}
+      .sub-list{padding:12px 14px}
+      .sub-list a{flex-wrap:wrap}
+      .cat-bar{padding:14px 16px}
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <img src="/logo-cfg.png" alt="CFG Global" />
+    </div>
+    <nav>
+      <a href="#categorias">Rutas</a>
+      <a href="/legal/aviso-legal.html">Legal</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <p class="tagline">🌱 Todo lo que necesitas para crecer y disfrutar</p>
+    <h1>Productos financieros, hipotecas, seguros, viajes, coches, formación y estudios en España</h1>
+    <p>Te ayudamos a encontrar las mejores opciones para cada paso de tu vida. Crece financieramente y disfruta de lo que realmente importa.</p>
+    <a href="#categorias" class="btn">Explorar nuestras rutas ↓</a>
+  </div>
+</section>
+
+<!-- CATEGORÍAS -->
+<div class="section-header" id="categorias">
+  <div class="container">
+    <h2>Tus rutas de crecimiento</h2>
+    <p>Cada categoría tiene guías, comparativas y recursos prácticos pensados para ti.</p>
+  </div>
+</div>
+
+<section style="padding:0 0 50px">
+  <div class="container">
+
+    <!-- 1. Productos Financieros -->
+    <div class="cat">
+      <div class="cat-bar">
+        <span class="icon">💰</span>
+        <div class="cname">
+          <h3>Productos Financieros</h3>
+          <p>Cuentas, depósitos, inversiones y todo lo que tu dinero necesita para trabajar por ti.</p>
+        </div>
+        <span class="arrow">→</span>
+      </div>
+      <ul class="sub-list">
+        <li><a href="/productos-financieros/cuentas-remuneradas.html"><span class="emoji">🏦</span><span class="sinfo"><strong>Cuentas y Depósitos</strong><span>Las mejores cuentas remuneradas y depósitos a plazo del mercado.</span></span><span class="slink">Ver guía →</span></a></li>
+        <li><a href="/productos-financieros/ahorro-inversion.html"><span class="emoji">📊</span><span class="sinfo"><strong>Ahorro e Inversión</strong><span>Fondos, planes de pensiones, ETFs. Empieza a invertir desde cero.</span></span><span class="slink">Ver guía →</span></a></li>
+        <li><a href="/productos-financieros/tarjetas-credito.html"><span class="emoji">💳</span><span class="sinfo"><strong>Tarjetas y Comparativas</strong><span>Tarjetas sin comisiones, depósitos y el mejor producto para ti.</span></span><span class="slink">Ver más →</span></a></li>
+        <li><a href="/productos-financieros/depositos-plazo.html"><span class="emoji">🏆</span><span class="sinfo"><strong>Depósitos a Plazo</strong><span>Rentabilidad asegurada. Compara los mejores depósitos del mercado.</span></span><span class="slink">Ver guía →</span></a></li>
+      </ul>
+    </div>
+
+    <!-- 2. Hipotecas -->
+    <div class="cat">
+      <div class="cat-bar">
+        <span class="icon">🏡</span>
+        <div class="cname">
+          <h3>Hipotecas</h3>
+          <p>Compra tu vivienda con las mejores condiciones. Te ayudamos a encontrar la hipoteca ideal.</p>
+        </div>
+        <span class="arrow">→</span>
+      </div>
+      <ul class="sub-list">
+        <li><a href="/hipotecas/fija-vs-variable.html"><span class="emoji">🔑</span><span class="sinfo"><strong>Fija vs Variable</strong><span>Comparativa completa de tipos de hipoteca. ¿Cuál te conviene más?</span></span><span class="slink">Ver guía →</span></a></li>
+        <li><a href="/hipotecas/primera-vivienda.html"><span class="emoji">📋</span><span class="sinfo"><strong>Primera Vivienda</strong><span>Todo lo que necesitas saber antes de pedir tu primera hipoteca.</span></span><span class="slink">Ver guía →</span></a></li>
+        <li><a href="/hipotecas/hipoteca-joven.html"><span class="emoji">🧑‍💼</span><span class="sinfo"><strong>Hipoteca Joven</strong><span>Ayudas, avales ICO y condiciones especiales para menores de 40 años.</span></span><span class="slink">Ver condiciones →</span></a></li>
+      </ul>
+    </div>
+
+    <!-- 3. Seguros — todo a cfg-seguros.com -->
+    <div class="cat">
+      <div class="cat-bar">
+        <span class="icon">🛡️</span>
+        <div class="cname">
+          <h3>Seguros</h3>
+          <p>Protege lo que más importa. Te ayudamos a encontrar el seguro que necesitas al mejor precio.</p>
+        </div>
+        <span class="arrow">→</span>
+      </div>
+      <ul class="sub-list">
+        <li><a href="https://cfg-seguros.com"><span class="emoji">❤️</span><span class="sinfo"><strong>Seguro de Vida</strong><span>Protege a tu familia ante cualquier imprevisto. Desde 5€/mes.</span></span><span class="slink">Información →</span></a></li>
+        <li><a href="https://cfg-seguros.com"><span class="emoji">🏥</span><span class="sinfo"><strong>Seguro de Salud</strong><span>Accede a las mejores clínicas y médicos sin listas de espera.</span></span><span class="slink">Información →</span></a></li>
+        <li><a href="https://cfg-seguros.com"><span class="emoji">🏠</span><span class="sinfo"><strong>Seguro de Hogar</strong><span>Tu casa protegida al mejor precio: robo, incendios, daños eléctricos.</span></span><span class="slink">Información →</span></a></li>
+        <li><a href="https://cfg-seguros.com"><span class="emoji">🏢</span><span class="sinfo"><strong>Seguros para Empresas</strong><span>Protege tu negocio con las coberturas que realmente necesitas.</span></span><span class="slink">Información →</span></a></li>
+        <li><a href="https://cfg-seguros.com"><span class="emoji">🚗</span><span class="sinfo"><strong>Seguro de Coche</strong><span>Compara seguros de coche. Elige la cobertura que necesitas al mejor precio.</span></span><span class="slink">Información →</span></a></li>
+      </ul>
+      <div style="padding:6px 24px 20px">
+        <a href="https://cfg-seguros.com" style="display:inline-block;background:#f5a623;color:#1e3a5f;padding:12px 28px;border-radius:8px;font-weight:700;font-size:.9rem;transition:.2s">📩 Pide tu presupuesto sin compromiso →</a>
+      </div>
+    </div>
+
+    <!-- 4. Coches -->
+    <div class="cat">
+      <div class="cat-bar">
+        <span class="icon">🚗</span>
+        <div class="cname">
+          <h3>Coches</h3>
+          <p>Alquiler y compra de vehículos. Encuentra el coche perfecto para ti.</p>
+        </div>
+        <span class="arrow">→</span>
+      </div>
+      <ul class="sub-list">
+        <li><a href="/coches/alquiler-coches.html"><span class="emoji">🔑</span><span class="sinfo"><strong>Alquiler de Coches</strong><span>Compara precios entre todas las compañías. El mejor coche al mejor precio.</span></span><span class="slink">Ver guía →</span></a></li>
+        <li><a href="https://cfg-seguros.com"><span class="emoji">📄</span><span class="sinfo"><strong>Seguro de Coche</strong><span>Compara seguros de coche y elige la cobertura que necesitas al mejor precio.</span></span><span class="slink">Ver guía →</span></a></li>
+        <li><a href="/coches/compra-vehiculos.html"><span class="emoji">🛒</span><span class="sinfo"><strong>Compra de Vehículos</strong><span>Nuevos y segunda mano. Encuentra tu próximo coche. Guía completa 2026.</span></span><span class="slink">Ver guía →</span></a></li>
+      </ul>
+    </div>
+
+    <!-- 5. Viajes -->
+    <div class="cat">
+      <div class="cat-bar">
+        <span class="icon">✈️</span>
+        <div class="cname">
+          <h3>Viajes</h3>
+          <p>Los mejores destinos, vuelos, hoteles y alquiler de coches para tus vacaciones.</p>
+        </div>
+        <span class="arrow">→</span>
+      </div>
+      <ul class="sub-list">
+        <li><a href="/viajes/vuelos-baratos.html"><span class="emoji">🌍</span><span class="sinfo"><strong>Vuelos Baratos</strong><span>Encuentra las mejores ofertas en vuelos para tu próximo viaje.</span></span><span class="slink">Ver guía →</span></a></li>
+        <li><a href="/viajes/seguro-viaje.html"><span class="emoji">🛡️</span><span class="sinfo"><strong>Seguro de Viaje</strong><span>Elige la mejor cobertura para viajar tranquilo. Cancelación, sanidad, equipaje.</span></span><span class="slink">Ver guía →</span></a></li>
+        <li><a href="/viajes/destinos-baratos.html"><span class="emoji">🏖️</span><span class="sinfo"><strong>Destinos Baratos</strong><span>Los mejores sitios para viajar sin arruinarte. Escapadas low cost desde 200€.</span></span><span class="slink">Ver destinos →</span></a></li>
+      </ul>
+    </div>
+
+    <!-- 6. Formación -->
+    <div class="cat">
+      <div class="cat-bar">
+        <span class="icon">📚</span>
+        <div class="cname">
+          <h3>Formación</h3>
+          <p>Cursos, libros y recursos para seguir creciendo profesional y personalmente.</p>
+        </div>
+        <span class="arrow">→</span>
+      </div>
+      <ul class="sub-list">
+        <li><a href="/formacion/cursos-finanzas.html"><span class="emoji">🎓</span><span class="sinfo"><strong>Cursos de Finanzas</strong><span>Aprende a invertir, ahorrar y gestionar tu dinero desde cero.</span></span><span class="slink">Ver guía →</span></a></li>
+        <li><a href="/formacion/libros-finanzas.html"><span class="emoji">📖</span><span class="sinfo"><strong>Libros Recomendados</strong><span>Las mejores lecturas para tu educación financiera. Empieza por uno.</span></span><span class="slink">Ver libros →</span></a></li>
+        <li><a href="/formacion/herramientas.html"><span class="emoji">💼</span><span class="sinfo"><strong>Membresías y Herramientas</strong><span>Plataformas, cursos, software y recursos para tu crecimiento profesional.</span></span><span class="slink">Ver guía →</span></a></li>
+      </ul>
+    </div>
+
+    <!-- 7. Estudiar en España -->
+    <div class="cat">
+      <div class="cat-bar">
+        <span class="icon">🎓</span>
+        <div class="cname">
+          <h3>Estudiar en España</h3>
+          <p>Todo sobre universidades, visados y homologación de títulos para estudiantes de Colombia y Latinoamérica.</p>
+        </div>
+        <span class="arrow">→</span>
+      </div>
+      <ul class="sub-list">
+        <li><a href="/estudiar-espana/homologacion-titulos.html"><span class="emoji">📝</span><span class="sinfo"><strong>Homologación de Títulos</strong><span>Guía paso a paso para homologar tu título universitario en España.</span></span><span class="slink">Ver guía →</span></a></li>
+        <li><a href="/estudiar-espana/visados-estudiante.html"><span class="emoji">🛂</span><span class="sinfo"><strong>Visados de Estudiante</strong><span>Tipos de visado, requisitos y documentación necesaria.</span></span><span class="slink">Información →</span></a></li>
+        <li><a href="/estudiar-espana/universidades.html"><span class="emoji">🎓</span><span class="sinfo"><strong>Universidades Españolas</strong><span>Rankings, precios y programas para colombianos y extranjeros.</span></span><span class="slink">Ver listado →</span></a></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="about" id="contacto">
+  <div class="container">
+    <h2>👋 ¿Quieres crecer con nosotros?</h2>
+    <p>Somos un equipo comprometido en ayudarte a encontrar los mejores productos financieros, seguros, hipotecas, viajes y recursos de formación para que tú y tu familia crezcáis y disfrutéis. Te guiamos en cada paso con información clara y útil.</p>
+    <a class="email" href="mailto:info@crecimientofinancieroglobal.com">📩 info@crecimientofinancieroglobal.com</a>
+    <div class="links">
+      <a href="https://cfg-seguros.com">cfg-seguros.com</a>
+      <a href="/legal/aviso-legal.html">Aviso Legal</a>
+      <a href="/legal/politica-privacidad.html">Privacidad</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><a href="/">Crecimiento Financiero Global</a> — Madrid, España</p>
+    <p>© 2026 — Todo lo que necesitas para crecer y disfrutar</p>
+  </div>
+</footer>
+
+</body>
+</html>
