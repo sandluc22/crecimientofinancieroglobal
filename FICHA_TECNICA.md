@@ -1,10 +1,11 @@
 # FICHA TÉCNICA — Crecimiento Financiero Global
 
 > **URL:** https://crecimientofinancieroglobal.com
-> **Eslogan:** Todo lo que necesitas para crecer y disfrutar
-> **Tagline logo:** Crecer y disfrutar
-> **Colores:** Azul marino (#1e3a5f) + Dorado (#f5a623)
-> **Tipo:** Portal de marketing de afiliados multirruta
+> **Eslogan:** Tu guía para tomar mejores decisiones financieras
+> **Colores:** Azul oscuro (#1e3a5f) + Azul (#2563eb) + Amarillo (#f5a623)
+> **Tipo:** Web de afiliados + asesoría financiera + estudios en España
+> **Última actualización:** 23 julio 2026
+> **Estado:** ✅ COMPLETA
 
 ---
 
@@ -12,14 +13,15 @@
 
 | Campo | Valor |
 |---|---|
-| **Nombre del sitio** | Crecimiento Financiero Global (CFG Global) |
-| **Dominio principal** | crecimientofinancieroglobal.com |
-| **Dominios relacionados** | cfg-seguros.com |
+| **Nombre del sitio** | Crecimiento Financiero Global (CFG) |
+| **Dominio** | crecimientofinancieroglobal.com |
 | **Propietaria** | Sandra Caicedo |
 | **País** | España (Madrid) |
 | **Idioma** | Español (es) |
 | **Fecha de lanzamiento** | Julio 2026 |
-| **Estado** | Activo / En desarrollo |
+| **Estado** | ✅ COMPLETA |
+| **Tipo** | Contenido afiliado + asesoría Colombia→España |
+| **Logo** | logo-cfg-header.png + favicon |
 
 ---
 
@@ -30,148 +32,119 @@
 | **Hosting** | Cloudflare Pages | ✅ Activo |
 | **CDN** | Cloudflare (global) | ✅ Activo |
 | **SSL** | Automático Cloudflare | ✅ Activo |
-| **Repositorio** | GitHub sandluc22/crecimientofinancieroglobal (master) | ✅ Conectado |
-| **Deploy** | Automático desde GitHub + manual forzado vía API | ✅ |
+| **Repositorio** | GitHub sandluc22/crecimientofinancieroglobal.com (master) | ✅ Conectado |
+| **Deploy** | Automático desde GitHub | ✅ |
 | **Build** | Ninguno (HTML estático) | ✅ |
-| **Output directory** | `/` (raíz) | ✅ |
-
-### Tokens y credenciales
-- **Token Cloudflare Pages+Workers+D1:** Guardado en `.creds/cloudflare.json`
-- **Account ID:** `72305fb85467e89da2940e359f9e09cc`
-- **Proyecto Pages:** `cfg-global-web`
+| **DNS** | Cloudflare (DNS-only, no proxy) | ✅ |
 
 ---
 
-## 3. ESTRUCTURA DEL SITIO (17+ páginas)
+## 3. ESTRUCTURA DEL SITIO (48+ artículos)
 
-### Rutas principales (6)
-| Ruta | Páginas | Estado |
+### Páginas principales
+- `/index.html` — Portada con hero, categorías, blog, testimonios, newsletter
+- `/aviso-legal.html` — Aviso Legal
+- `/privacidad.html` — Política de Privacidad
+- `/sitemap.xml` — Sitemap (50 URLs)
+
+### Categorías de contenido
+
+| Carpeta | Artículos | Estado |
 |---|---|---|
-| `/productos-financieros/` | index + 4 artículos | ✅ |
-| `/hipotecas/` | index + 3 artículos | ✅ |
-| `/seguros/` | index + 2 artículos (enlazan a cfg-seguros.com) | ✅ |
-| `/coches/` | index + 2 artículos | ✅ |
-| `/viajes/` | index + 3 artículos | ✅ |
-| `/formacion/` | index + 2 artículos | ✅ |
+| `/productos-financieros/` | Tarjetas, cuentas | ✅ |
+| `/ahorro/` | Depósitos, ahorro | ✅ |
+| `/hipotecas/` | Hipotecas | ✅ |
+| `/seguros/` | Seguros | ✅ |
+| `/coches/` | Coches + seguros coche | ✅ |
+| `/viajes/` | Alquiler coche, vuelos | ✅ |
+| `/formacion/` | Cursos, herramientas | ✅ |
+| `/blog/` | Blog general (fondos, educación, casa, etc.) | ✅ |
+| `/estudiar-espana/` | **SECCIÓN ESTRELLA** — 7 artículos para colombianos | ✅ |
 
-### Rutas adicionales
-| Ruta | Páginas | Estado |
-|---|---|---|
-| `/estudiar-espana/` | index + 3 artículos (homologación, visados, universidades) | ✅ Contenido LATAM |
-| `/legal/` | aviso-legal, politica-privacidad | ✅ |
-| `/blog/` | index + 2 artículos | ✅ (legacy) |
-
-### Páginas totales: ~22
-
----
-
-## 4. DISEÑO Y MARCA
-
-| Elemento | Descripción | Estado |
-|---|---|---|
-| **Logotipo** | CFG dorado + "Crecer y disfrutar" blanco, sobre azul suave con borde blanco | ✅ En header |
-| **Favicon** | C dorada sobre fondo azul marino | ✅ |
-| **Tipografía** | Inter (Google Fonts) | ✅ |
-| **Esquema de colores** | #1e3a5f (azul marino), #f5a623 (dorado), #fff (blanco) | ✅ |
-| **Diseño** | Responsivo, estilo lista con tarjetas por categoría | ✅ |
-| **Open Graph** | Meta tags para previsualización en redes | ✅ |
-
----
-
-## 5. SEO Y VISIBILIDAD
-
-| Elemento | Estado | Notas |
-|---|---|---|
-| **Google Search Console** | ✅ Verificado | Propiedad verificada + sitemap enviado |
-| **Sitemap.xml** | ✅ Creado | 30+ URLs, enviado a Google |
-| **Robots.txt** | ✅ Creado | Rastreo permitido |
-| **Google Analytics** | ✅ GA4 Instalado | ID G-XVVBY349WZ |
-| **Meta tags SEO** | ✅ | Titles, descriptions, canonical |
-| **Open Graph** | ✅ | Facebook, Twitter, Telegram |
-| **URLs amigables** | ✅ | Sin parámetros, limpias |
-| **Contenido duplicado** | ✅ | Canónicas configuradas |
-| **Velocidad de carga** | ⚠️ Pendiente de revisar | Cloudflare Pages suele ser rápido |
-
----
-
-## 6. ESTRATEGIA DE AFILIADOS
-
-| Programa | Estado | Notas |
-|---|---|---|
-| **FinanceAds** | ⏳ Pendiente respuesta | Formulario enviado |
-| **Awin** | ❌ Pendiente registro | Pendiente |
-| **CFG Seguros (directo)** | ✅ Activo | Enlaces a cfg-seguros.com |
-| **Programas de viajes** | ⏳ Pendiente | Booking, DiscoverCars, Rentalcars |
-| **Programas de formación** | ⏳ Pendiente | Hotmart, Amazon |
-
-### Productos promocionados
-- Cuentas remuneradas y depósitos
-- Hipotecas (fija, variable, primera vivienda, joven)
-- Seguros (vida, salud, hogar, empresas, coche) → cfg-seguros.com
-- Alquiler de coches
-- Vuelos y viajes
-- Cursos de finanzas
-- Libros recomendados
-- Estudios en España (homologación, visados, universidades)
-
----
-
-## 7. PÁGINAS LEGALES
-
-| Página | URL | Estado |
-|---|---|---|
-| **Aviso Legal** | /legal/aviso-legal.html | ✅ |
-| **Política de Privacidad** | /legal/politica-privacidad.html | ✅ |
-| **Política de Cookies** | ❌ Pendiente | Opcional (no necesita aviso de cookies si solo GA4 analítico) |
-
----
-
-## 8. PENDIENTES TÉCNICOS (priorizados)
-
-### 🔴 Urgente (antes de la revisión)
-1. ✅ Google Search Console — verificado
-2. ✅ Sitemap.xml — creado y enviado
-3. ✅ Robots.txt — creado
-4. ✅ Google Analytics — instalado
-
-### 🟡 Importante (a corto plazo)
-5. Colocar enlaces de afiliados cuando se activen los programas
-6. Marcar enlaces afiliados con `rel="sponsored"`
-7. Optimizar imágenes (peso y formato)
-
-### 🟢 Mejora continua
-8. Escribir contenido nuevo periódicamente (blog + artículos)
-9. Revisar Core Web Vitals
-10. Configurar redirecciones 301 si cambian URLs
-
----
-
-## 9. CONTACTO
-
-| Canal | Dato |
+### Sección Estudiar España (7 artículos + testimonios)
+| Ruta | Contenido |
 |---|---|
-| **Email** | info@crecimientofinancieroglobal.com |
-| **Web** | https://crecimientofinancieroglobal.com |
-| **Seguros** | https://cfg-seguros.com |
+| `/estudiar-espana/guia-completa-colombia.html` | Guía completa para colombianos |
+| `/estudiar-espana/por-que-contratar-asesoria.html` | Beneficios de contratar asesoría |
+| `/estudiar-espana/universidades.html` | Universidades españolas |
+| `/estudiar-espana/visados-estudiante.html` | Visados de estudiante |
+| `/estudiar-espana/homologacion-titulos.html` | Homologación de títulos |
+| `/estudiar-espana/costos-estudiar-espana-2026.html` | Costes y presupuesto |
+| `/estudiar-espana/testimonios.html` | 5 casos de éxito |
 
 ---
 
-*Ficha actualizada: 21 julio 2026*
+## 4. FORMULARIOS Y CAPTACIÓN
 
-## 7. MATERIAL AUDIOVISUAL
+| Componente | Proveedor | Estado |
+|---|---|---|
+| **Formulario de contacto** | Web3Forms | ✅ Activo |
+| **Newsletter suscripción** | Web3Forms | ✅ Activo |
+| **WhatsApp flotante** | Enlace directo wa.me | ✅ Activo |
+| **Portafolio PDF** | Descargable para clientes | ✅ |
 
-### Vídeos con movimiento real (Pexels + ffmpeg)
+---
 
-| Tema | Texto en vídeo | Archivo | Estado |
-|---|---|---|---|
-| Ahorro | "AHORRA CON INTELIGENCIA" | final_ahorro.mp4 | ✅ |
-| Inversiones | "INVIERTE CON CONFIANZA" | final_inversiones.mp4 | ✅ |
-| Viajes | "VIAJA TRANQUILO" | final_viajes.mp4 | ✅ |
-| Estudios | "ESTUDIA EN ESPANA" | PENDIENTE | ❌ Foto sin elegir |
+## 5. REDES SOCIALES
 
-**Formato:** 720×1280 (9:16), 7-10s, H.264
-**Texto:** Blanco 44px con borde negro 4px, centrado arriba
-**Dominio:** ❌ No va en pantalla — va en la descripción del post
-**Ubicación:** `/home/node/workspace/videos-con-movimiento/`
-**Script:** `/home/node/workspace/diseño-y-video/generar_videos_movimiento.py`
-**Ficha herramientas:** `/home/node/workspace/diseño-y-video/FICHA_HERRAMIENTAS.md`
+| Red | Enlace | Estado |
+|---|---|---|
+| Instagram | @cfg_seguros_gg | ✅ |
+| Facebook | CFG Seguros | ✅ |
+| LinkedIn | cfg-seguros | ✅ |
+| TikTok | @cfgsegurosgg | ✅ |
+
+---
+
+## 6. SEO Y ANALÍTICA
+
+| Componente | Estado |
+|---|---|
+| Google Analytics (G-XVVBY349WZ) | ✅ |
+| Google Search Console | ✅ |
+| Meta tags (description, og) | ✅ En todas las páginas |
+| Sitemap XML (50 URLs) | ✅ |
+| Canonical URLs | ✅ |
+| Diseño responsive | ✅ |
+
+---
+
+## 7. IMÁGENES Y MEDIA
+
+| Recurso | Estado |
+|---|---|
+| Logo CFG header (logo-cfg-header.png) | ✅ En cabecera |
+| Favicon (logo-cfg-icono.png) | ✅ |
+| 7 fotos Unsplash Estudiar España | ✅ En artículos |
+| Imágenes decorativas blog | ✅ Emoji banners |
+
+---
+
+## 8. DOCUMENTACIÓN DESCARGABLE
+
+| Documento | Estado |
+|---|---|
+| Portafolio profesional PDF | ✅ Enviado |
+| Guía compartir Facebook PDF | ✅ Enviado |
+| Tarifas internas (TARIFAS_INTERNAS.md) | ✅ |
+
+---
+
+## 9. PENDIENTES
+
+| Tarea | Prioridad | Estado |
+|---|---|---|
+| Compartir en Facebook | 🔴 Alta | ⏳ Pendiente de Sandra |
+| FinanceAds (aceptación) | 🔴 Alta | ⏳ Pendiente externo |
+| Publicar 1-2 artículos/semana | 🟡 Media | ⏳ Contenido fresco |
+| Posicionamiento Google | 🟡 Media | ⏳ 2-3 semanas |
+
+---
+
+## 10. NOTAS
+
+- Sin enlaces de afiliado aún (esperando financeAds)
+- Sin precios visibles en la web → consulta gratuita
+- Sin Sandra/Galilea en contacto (info@crecimientofinancieroglobal.com)
+- Los 48 artículos necesitan tiempo para que Google los indexe
+- La guía PDF de Facebook tiene 3 textos listos para copiar/pegar
