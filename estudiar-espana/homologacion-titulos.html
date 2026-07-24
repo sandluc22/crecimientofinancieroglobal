@@ -91,5 +91,20 @@
   <hr />
   <p style="text-align:center;color:#94a3b8;font-size:.82rem">Crecimiento Financiero Global — Información actualizada en julio de 2026. Recomendamos consultar la web del Ministerio de Educación para información oficial actualizada.</p>
 </div>
+
+<!-- Cookie consent banner -->
+<div id="cookie-banner" class="cookie-banner">
+  <span>Usamos cookies propias y de terceros (Google Analytics) para mejorar tu experiencia. <a href="/legal/politica-cookies.html">Más información</a></span>
+  <button onclick="aceptarCookies()">Aceptar</button>
+</div>
+<script>
+function aceptarCookies() {
+  document.getElementById('cookie-banner').classList.add('hidden');
+  localStorage.setItem('cookies_aceptadas', 'true');
+}
+if (localStorage.getItem('cookies_aceptadas') === 'true') {
+  document.getElementById('cookie-banner').classList.add('hidden');
+}
+</script>
 </body>
 </html>

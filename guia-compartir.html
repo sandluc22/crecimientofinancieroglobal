@@ -114,5 +114,20 @@ Sus historias te van a inspirar. Si ellos pudieron, tú también puedes. 🇨�
 </div>
 
 </div>
+
+<!-- Cookie consent banner -->
+<div id="cookie-banner" class="cookie-banner">
+  <span>Usamos cookies propias y de terceros (Google Analytics) para mejorar tu experiencia. <a href="/legal/politica-cookies.html">Más información</a></span>
+  <button onclick="aceptarCookies()">Aceptar</button>
+</div>
+<script>
+function aceptarCookies() {
+  document.getElementById('cookie-banner').classList.add('hidden');
+  localStorage.setItem('cookies_aceptadas', 'true');
+}
+if (localStorage.getItem('cookies_aceptadas') === 'true') {
+  document.getElementById('cookie-banner').classList.add('hidden');
+}
+</script>
 </body>
 </html>

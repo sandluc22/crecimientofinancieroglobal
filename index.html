@@ -51,7 +51,13 @@
 @media (max-width:768px){
   [data-wa-float] { width:48px !important; height:48px !important; bottom:16px !important; right:16px !important; }
 }
-</style>
+
+    /* Cookie banner */
+    .cookie-banner{position:fixed;bottom:0;left:0;right:0;background:#1e3a5f;color:#fff;padding:14px 24px;z-index:9999;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;font-size:.9rem;box-shadow:0 -4px 12px rgba(0,0,0,.15)}
+    .cookie-banner.hidden{display:none}
+    .cookie-banner a{color:#fbbf24;text-decoration:underline}
+    .cookie-banner button{background:#fbbf24;color:#1e3a5f;border:none;padding:8px 20px;border-radius:6px;font-weight:700;cursor:pointer;font-size:.85rem}
+    .cookie-banner button:hover{background:#f59e0b}</style>
 
 <!-- HERO -->
 <section class="hero">
@@ -495,5 +501,20 @@ document.querySelectorAll('nav a').forEach(a => {
 });
 </script>
 
+
+<!-- Cookie consent banner -->
+<div id="cookie-banner" class="cookie-banner">
+  <span>Usamos cookies propias y de terceros (Google Analytics) para mejorar tu experiencia. <a href="/legal/politica-cookies.html">Más información</a></span>
+  <button onclick="aceptarCookies()">Aceptar</button>
+</div>
+<script>
+function aceptarCookies() {
+  document.getElementById('cookie-banner').classList.add('hidden');
+  localStorage.setItem('cookies_aceptadas', 'true');
+}
+if (localStorage.getItem('cookies_aceptadas') === 'true') {
+  document.getElementById('cookie-banner').classList.add('hidden');
+}
+</script>
 </body>
 </html>
