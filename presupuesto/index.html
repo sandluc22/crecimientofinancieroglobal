@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar presupuesto | Crecimiento Financiero Global</title>
+  <meta name="description" content="Solicita tu presupuesto personalizado sin compromiso. Te ayudamos a elegir el mejor producto financiero para ti.">
+  <link rel="canonical" href="https://crecimientofinancieroglobal.com/presupuesto/">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #0f2844 0%, #1a3a5c 100%);
+      padding: 20px 0;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #ffd700, #ffaa00);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 22px;
+      color: #0f2844;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-text h1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #e2e8f0;
+      line-height: 1.2;
+    }
+
+    .logo-text span {
+      font-size: 11px;
+      color: #ffd700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .back-link {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: #ffd700;
+    }
+
+    /* Main content */
+    .page-hero {
+      background: linear-gradient(135deg, #0f2844 0%, #1a3a5c 100%);
+      padding: 60px 0 80px;
+      text-align: center;
+      color: white;
+    }
+
+    .page-hero h1 {
+      font-size: 40px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .page-hero p {
+      font-size: 18px;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Form section */
+    .form-section {
+      padding: 40px 0 80px;
+      margin-top: -40px;
+    }
+
+    .form-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+      padding: 48px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .form-card h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #0f2844;
+      margin-bottom: 8px;
+    }
+
+    .form-card .subtitle {
+      color: #64748b;
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+
+    .form-group label .required {
+      color: #ef4444;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.2s;
+      background: #f8fafc;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #ffd700;
+      background: white;
+    }
+
+    .form-group input::placeholder {
+      color: #94a3b8;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 14px 32px;
+      background: linear-gradient(135deg, #ffd700, #ffaa00);
+      color: #0f2844;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(255, 215, 0, 0.4);
+    }
+
+    .privacy-note {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 12px;
+      margin-top: 16px;
+    }
+
+    /* Success message */
+    .success-msg {
+      display: none;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .success-msg .check {
+      width: 64px;
+      height: 64px;
+      background: #22c55e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: white;
+      margin: 0 auto 16px;
+    }
+
+    .success-msg h3 {
+      font-size: 20px;
+      color: #0f2844;
+      margin-bottom: 8px;
+    }
+
+    .success-msg p {
+      color: #64748b;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f2844;
+      padding: 40px 0;
+      margin-top: auto;
+      text-align: center;
+    }
+
+    footer p {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #94a3b8;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #ffd700;
+    }
+
+    footer .footer-links {
+      margin-top: 12px;
+    }
+
+    footer .footer-links a {
+      margin: 0 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .page-hero h1 { font-size: 28px; }
+      .form-card { padding: 28px 20px; }
+      header { padding: 16px 0; }
+      .logo-text h1 { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="/" class="logo">
+        <div class="logo-icon">CFG</div>
+        <div class="logo-text">
+          <h1>Crecimiento Financiero Global</h1>
+          <span>Tu guía para crecer y disfrutar</span>
+        </div>
+      </a>
+      <a href="/productos-financieros/mejores-cuentas-remuneradas-2026.html" class="back-link">← Volver a cuentas remuneradas</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Solicita tu presupuesto</h1>
+      <p>Te ayudamos a elegir el mejor producto financiero sin compromiso</p>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section class="form-section">
+    <div class="container">
+      <div class="form-card">
+        <!-- Form -->
+        <div id="form-container">
+          <h2>Déjanos tus datos</h2>
+          <p class="subtitle">Te contactaremos en menos de 24 horas con un presupuesto personalizado</p>
+          <form id="presupuesto-form">
+            <div class="form-group">
+              <label for="nombre">Nombre completo <span class="required">*</span></label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej: María García López" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="Ej: mariagarcia@gmail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono <span class="required">*</span></label>
+              <input type="tel" id="telefono" name="telefono" placeholder="Ej: 612 34 56 78" required>
+            </div>
+            <div class="form-group">
+              <label for="motivo">¿Qué necesitas? <span class="required">*</span></label>
+              <select id="motivo" name="motivo" required style="width:100%;padding:12px 16px;border:2px solid #e2e8f0;border-radius:10px;font-size:15px;font-family:'Inter',sans-serif;background:#f8fafc;">
+                <option value="">Selecciona una opción…</option>
+                <option value="inversion">Consulta de inversión</option>
+                <option value="ahorro">Consulta de ahorro</option>
+                <option value="seguros">Consulta de seguros</option>
+                <option value="jubilacion">Planificación de jubilación</option>
+                <option value="presupuesto">Presupuesto personalizado</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-btn">Solicitar presupuesto gratuito</button>
+            <p class="privacy-note">Tus datos están seguros. No compartimos tu información con terceros.</p>
+          </form>
+        </div>
+        <!-- Success -->
+        <div class="success-msg" id="success-msg">
+          <div class="check">✓</div>
+          <h3>¡Recibido!</h3>
+          <p>Gracias por tu solicitud. Te contactaremos en menos de 24 horas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><a href="/">Crecimiento Financiero Global</a> — Tu guía para crecer y disfrutar</p>
+      <div class="footer-links">
+        <a href="/legal/aviso-legal.html">Aviso Legal</a> | <a href="/legal/privacidad.html">Privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('presupuesto-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      const data = {
+        nombre: formData.get('nombre'),
+        email: formData.get('email'),
+        telefono: formData.get('telefono')
+      };
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            access_key: 'd12f1c15-dd00-4cd8-b312-cd18ce27c196',
+            subject: `Nuevo presupuesto - ${data.motivo} - CFG Global`,
+            from_name: data.nombre,
+            email: data.email,
+            telefono: data.telefono,
+            message: `Nuevo presupuesto solicitado:\n\nNombre: ${data.nombre}\nEmail: ${data.email}\nTeléfono: ${data.telefono}\nMotivo: ${data.motivo}`
+          })
+        });
+
+        if (response.ok) {
+          document.getElementById('form-container').style.display = 'none';
+          document.getElementById('success-msg').style.display = 'block';
+        } else {
+          alert('Hubo un error al enviar el formulario. Inténtalo de nuevo.');
+        }
+      } catch (error) {
+        alert('Error de conexión. Por favor, inténtalo de nuevo.');
+      }
+    });
+  </script>
+</body>
+</html>
