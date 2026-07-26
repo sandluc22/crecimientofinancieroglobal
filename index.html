@@ -137,27 +137,81 @@
   </section>
 <footer>
     <div class="container">
-      <div class="footer-grid" style="display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;">
-        <div class="footer-col" style="flex:1;min-width:200px;">
+
+      <!-- SECCION FORMULARIO -->
+      <div style="background:rgba(255,255,255,0.06);border-radius:16px;padding:32px;margin-bottom:32px;text-align:center;">
+        <h3 style="color:#ffffff;font-size:20px;font-weight:700;margin:0 0 4px;">¿Tienes alguna duda?</h3>
+        <p style="color:rgba(255,255,255,0.7);font-size:14px;margin:0 0 20px;">Déjanos tus datos y te ayudamos sin compromiso</p>
+        <form id="footer-form" style="max-width:500px;margin:0 auto;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <input type="text" id="f-nombre" placeholder="Nombre" required style="width:100%;padding:12px 14px;border:1.5px solid rgba(255,255,255,0.2);border-radius:10px;font-size:14px;background:rgba(255,255,255,0.1);color:#fff;font-family:'Inter',sans-serif;outline:none;">
+            <input type="email" id="f-email" placeholder="Email" required style="width:100%;padding:12px 14px;border:1.5px solid rgba(255,255,255,0.2);border-radius:10px;font-size:14px;background:rgba(255,255,255,0.1);color:#fff;font-family:'Inter',sans-serif;outline:none;">
+          </div>
+          <textarea id="f-mensaje" placeholder="¿En qué podemos ayudarte?" required style="width:100%;padding:12px 14px;border:1.5px solid rgba(255,255,255,0.2);border-radius:10px;font-size:14px;margin-top:12px;min-height:80px;background:rgba(255,255,255,0.1);color:#fff;font-family:'Inter',sans-serif;outline:none;"></textarea>
+          <button type="submit" id="f-btn" style="background:linear-gradient(135deg,#ffd700,#ffaa00);color:#0f2844;border:none;padding:14px 32px;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;width:100%;margin-top:12px;font-family:'Inter',sans-serif;">Enviar consulta</button>
+        </form>
+        <div id="f-success" style="display:none;text-align:center;padding:20px;">
+          <div style="font-size:40px;">✅</div>
+          <h4 style="color:#fff;margin:8px 0 4px;">¡Mensaje enviado!</h4>
+          <p style="color:rgba(255,255,255,0.7);font-size:14px;">Gracias por contactarnos. Te responderemos pronto.</p>
+        </div>
+      </div>
+
+      <script>
+        document.getElementById('footer-form').addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const btn = document.getElementById('f-btn');
+          btn.disabled = true;
+          btn.textContent = 'Enviando...';
+          try {
+            const resp = await fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: {'Content-Type':'application/json'},
+              body: JSON.stringify({
+                access_key: '58b165d2-318b-4718-bb6a-9b46dbb4540d',
+                subject: 'Formulario home CFG Global - ' + document.getElementById('f-nombre').value,
+                name: document.getElementById('f-nombre').value,
+                email: document.getElementById('f-email').value,
+                message: document.getElementById('f-mensaje').value
+              })
+            });
+            if (resp.ok) {
+              document.getElementById('footer-form').style.display = 'none';
+              document.getElementById('f-success').style.display = 'block';
+            } else {
+              alert('Hubo un error. Inténtalo de nuevo.');
+            }
+          } catch(e) {
+            alert('Error de conexión. Inténtalo de nuevo.');
+          } finally {
+            btn.disabled = false;
+            btn.textContent = 'Enviar consulta';
+          }
+        });
+      </script>
+
+      <!-- REDES + CONTACTO + LEGAL -->
+      <div class="footer-grid" style="display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;margin-bottom:24px;">
+        <div class="footer-col" style="flex:1;min-width:160px;">
           <h5 style="color:#ffffff;font-size:16px;font-weight:700;margin-bottom:12px;">Síguenos</h5>
           <a href="https://www.instagram.com/cfg_seguros_gg/" target="_blank" rel="noopener" style="display:block;color:#ffffff;text-decoration:none;font-size:14px;margin-bottom:8px;opacity:0.85;">📸 Instagram</a>
           <a href="https://www.facebook.com/CFGSeguros" target="_blank" rel="noopener" style="display:block;color:#ffffff;text-decoration:none;font-size:14px;margin-bottom:8px;opacity:0.85;">👍 Facebook</a>
           <a href="https://www.tiktok.com/@cfgsegurosgg" target="_blank" rel="noopener" style="display:block;color:#ffffff;text-decoration:none;font-size:14px;margin-bottom:8px;opacity:0.85;">🎵 TikTok</a>
           <a href="https://www.linkedin.com/in/sandra-caicedo-cfg/" target="_blank" rel="noopener" style="display:block;color:#ffffff;text-decoration:none;font-size:14px;opacity:0.85;">💼 LinkedIn</a>
         </div>
-        <div class="footer-col" style="flex:1;min-width:200px;">
+        <div class="footer-col" style="flex:1;min-width:160px;">
           <h5 style="color:#ffffff;font-size:16px;font-weight:700;margin-bottom:12px;">Contacto</h5>
           <a href="mailto:info@crecimientofinancieroglobal.com" style="display:block;color:#ffffff;text-decoration:none;font-size:14px;margin-bottom:8px;opacity:0.85;">✉️ info@crecimientofinancieroglobal.com</a>
-          <a href="/contacto/" style="display:block;color:#ffffff;text-decoration:none;font-size:14px;margin-bottom:4px;opacity:0.85;">📝 Formulario de contacto</a>
         </div>
-        <div class="footer-col" style="flex:1;min-width:200px;">
+        <div class="footer-col" style="flex:1;min-width:160px;">
           <h5 style="color:#ffffff;font-size:16px;font-weight:700;margin-bottom:12px;">Legal</h5>
           <a href="/legal/aviso-legal.html" style="display:block;color:#ffffff;text-decoration:none;font-size:14px;margin-bottom:8px;opacity:0.85;">📄 Aviso legal</a>
           <a href="/legal/politica-privacidad.html" style="display:block;color:#ffffff;text-decoration:none;font-size:14px;margin-bottom:8px;opacity:0.85;">🔒 Política de privacidad</a>
           <a href="/legal/politica-cookies.html" style="display:block;color:#ffffff;text-decoration:none;font-size:14px;opacity:0.85;">🍪 Política de cookies</a>
         </div>
       </div>
-      <div class="footer-bottom" style="margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.15);text-align:center;">
+
+      <div class="footer-bottom" style="padding-top:20px;border-top:1px solid rgba(255,255,255,0.15);text-align:center;">
         <p style="color:rgba(255,255,255,0.6);font-size:13px;">&copy; 2026 Crecimiento Financiero Global. Todos los derechos reservados.</p>
       </div>
     </div>
