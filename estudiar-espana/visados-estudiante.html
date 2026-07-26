@@ -89,6 +89,79 @@
   <p style="text-align:center;color:#94a3b8;font-size:.82rem">Crecimiento Financiero Global — Información actualizada en julio de 2026. Recomendamos consultar la web del Ministerio de Asuntos Exteriores y la sede consular correspondiente.</p>
 </div>
 
+  <!-- CTA + GUIA PRECIOS + FORMULARIO -->
+  <div style="background:#f0f7ff;border:2px solid #ffd700;border-radius:16px;padding:36px;margin:40px 0;max-width:700px;">
+    <div style="text-align:center;">
+      <div style="font-size:40px;margin-bottom:12px;">🇪🇸</div>
+      <h3 style="color:#0f2844;font-size:22px;font-weight:800;margin:0 0 8px;">¿Necesitas ayuda con tu visado?</h3>
+      <p style="color:#1e3a5f;font-size:15px;margin:0 0 8px;line-height:1.6;">Te guiamos paso a paso en tu proceso de visado, desde la documentación hasta el presupuesto completo.</p>
+      <div style="background:white;border-radius:12px;padding:16px 20px;margin:16px auto;max-width:500px;border:1px solid #e2e8f0;">
+        <p style="font-size:14px;color:#0f2844;font-weight:600;margin:0;">💰 Consulta nuestra <a href="/estudiar-espana/costos-estudiar-espana-2026.html" style="color:#eab308;font-weight:700;">guía de costos actualizada</a> para estudiar en España</p>
+      </div>
+    </div>
+
+    <form id="visa-form" style="text-align:left;max-width:500px;margin:24px auto 0;">
+      <p style="font-size:15px;font-weight:600;color:#0f2844;margin-bottom:16px;">Solicita tu presupuesto personalizado sin compromiso:</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <input type="text" id="v-nombre" placeholder="Nombre completo" required style="width:100%;padding:12px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;background:#fff;font-family:'Inter',sans-serif;outline:none;">
+        <input type="email" id="v-email" placeholder="Tu email" required style="width:100%;padding:12px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;background:#fff;font-family:'Inter',sans-serif;outline:none;">
+      </div>
+      <input type="tel" id="v-telefono" placeholder="Tu teléfono (WhatsApp)" required style="width:100%;padding:12px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;margin-top:12px;background:#fff;font-family:'Inter',sans-serif;outline:none;">
+      <select id="v-pais" style="width:100%;padding:12px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;margin-top:12px;background:#fff;font-family:'Inter',sans-serif;outline:none;">
+        <option value="">Selecciona tu país</option>
+        <option value="Colombia">Colombia</option>
+        <option value="Ecuador">Ecuador</option>
+        <option value="Perú">Perú</option>
+        <option value="Mexico">México</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Chile">Chile</option>
+        <option value="Otro">Otro</option>
+      </select>
+      <textarea id="v-mensaje" placeholder="¿Qué tipo de visado te interesa? ¿Para qué estudios?" style="width:100%;padding:12px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:14px;margin-top:12px;min-height:80px;background:#fff;font-family:'Inter',sans-serif;outline:none;"></textarea>
+      <button type="submit" id="v-btn" style="background:linear-gradient(135deg,#ffd700,#ffaa00);color:#0f2844;border:none;padding:14px 32px;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;width:100%;margin-top:16px;font-family:'Inter',sans-serif;">Solicitar presupuesto gratuito</button>
+    </form>
+    <div id="v-success" style="display:none;text-align:center;padding:20px;">
+      <div style="font-size:48px;">✅</div>
+      <h4 style="color:#0f2844;margin-bottom:8px;">¡Mensaje enviado!</h4>
+      <p style="color:#64748b;font-size:14px;">Gracias por tu interés. Te contactaremos pronto para ayudarte con tu visado.</p>
+    </div>
+  </div>
+
+  <script>
+  document.getElementById('visa-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('v-btn');
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+    try {
+      const resp = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+          access_key: '58b165d2-318b-4718-bb6a-9b46dbb4540d',
+          subject: 'Solicitud visado estudios - ' + document.getElementById('v-nombre').value,
+          name: document.getElementById('v-nombre').value,
+          email: document.getElementById('v-email').value,
+          telefono: document.getElementById('v-telefono').value,
+          pais: document.getElementById('v-pais').value,
+          message: document.getElementById('v-mensaje').value
+        })
+      });
+      if (resp.ok) {
+        document.getElementById('visa-form').style.display = 'none';
+        document.getElementById('v-success').style.display = 'block';
+      } else {
+        alert('Hubo un error. Inténtalo de nuevo.');
+      }
+    } catch(e) {
+      alert('Error de conexión. Inténtalo de nuevo.');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Solicitar presupuesto gratuito';
+    }
+  });
+  </script>
+
 <!-- Cookie consent banner -->
 <div id="cookie-banner" class="cookie-banner">
   <span>Usamos cookies propias y de terceros (Google Analytics) para mejorar tu experiencia. <a href="/legal/politica-cookies.html">Más información</a></span>
