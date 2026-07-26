@@ -24,24 +24,20 @@
 <body>
 
 <header>
-  <div class="container">
-    <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-      <div style="background:linear-gradient(135deg,#ffd700,#ffaa00);color:#0f2844;width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;letter-spacing:0.5px;flex-shrink:0;">CFG</div>
-      <div style="display:flex;flex-direction:column;">
-        <span style="font-size:20px;font-weight:800;color:#ffffff;letter-spacing:-0.3px;white-space:nowrap;">Crecimiento Financiero Global</span>
-        <span style="font-size:13px;color:#e2e8f0;font-weight:500;white-space:nowrap;">Tu guía para crecer y disfrutar</span>
-      </div>
-    </a>
-    <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
-    <nav>
-      <a href="#categorias">Rutas</a>
-      <a href="#blog">Blog</a>
-      <a href="#quienes-somos">Sobre nosotros</a>
-      <a href="#contacto">Contacto</a>
-      <a href="https://cfg-seguros.com" class="nav-cta">Seguros</a>
-    </nav>
-  </div>
-</header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="10" fill="url(#grad)"/>
+          <defs><linearGradient id="grad" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#ffd700"/><stop offset="1" stop-color="#ffaa00"/></linearGradient></defs>
+          <text x="24" y="32" text-anchor="middle" font-family="Inter,sans-serif" font-weight="900" font-size="19" fill="#0f2844">CFG</text>
+        </svg>
+        <div style="display:flex;flex-direction:column;">
+          <span style="font-size:20px;font-weight:800;color:#ffd700;letter-spacing:-0.3px;">Crecimiento Financiero Global</span>
+          <span style="font-size:13px;color:#ffd700;font-weight:500;opacity:0.8;">Tu guía para crecer y disfrutar</span>
+        </div>
+      </a>
+    </div>
+  </header>
   <!-- HERO -->
   <section class="hero" style="position:relative;padding:80px 0 60px;background:linear-gradient(135deg,#0f2844 0%,#1a3f6a 100%);overflow:hidden;">
     <div style="position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(255,215,0,0.08) 0%,transparent 70%);pointer-events:none;"></div>
