@@ -1,0 +1,16 @@
+# Redirigir a 404 todas las rutas que no existen
+/seguro-vida/* / 404
+/seguro-ahorro/* / 404
+/ahorro-inversion/seguros/* / 404
+/ahorro-inversion/viajes/* / 404
+/ahorro-inversion/productos-financieros/* / 404
+/contacto/seguros/* / 404
+/contacto/hipotecas/* / 404
+
+# Redirigir versiones canónicas .html a sin extensión
+/index.html / 301
+
+# Redirigir legales
+/legal/politica-cookies.html /legal/politica-cookies 301
+/legal/aviso-legal.html /legal/aviso-legal 301
+/legal/privacidad.html /legal/privacidad 301
