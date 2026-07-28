@@ -1,3 +1,6 @@
+# Soft 404: forzar 404 real
+/404.html / 404
+
 # Redirigir a 404 todas las rutas que no existen
 /seguro-vida/* / 404
 /seguro-ahorro/* / 404
