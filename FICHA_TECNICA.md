@@ -12,7 +12,7 @@
 ## Estructura
 - Página principal: index.html
 - Blog: /blog/index.html + artículos individuales
-- Artículos: 48 publicados ✅
+- Artículos: 49 publicados ✅ (6 ago: «Cómo empezar a ahorrar e invertir desde cero»)
 - Portafolio PDF: portafolio.html
 - Guía PDF: guia-compartir.html
 - Página legal: privacidad.html, aviso-legal.html, cookies.html
@@ -40,13 +40,14 @@
 - Instagram: conectado
 - LinkedIn: conectado
 
-## Estado actual (25 julio 2026)
+## Estado actual (6 agosto 2026)
 - **Al 100% operativa** ✅
 - Contenido completo
 - SEO optimizado
 - Analytics y Search Console activos
 - Migrada de Netlify a Cloudflare Pages ✅
 - NOTA: La ficha técnica anterior mencionaba Netlify; está desactualizada. Todo está en Cloudflare.
+- Integridad: la web se despliega sola desde GitHub; todo cambio lo ejecuta Alfa (Regla Nº6: los agentes no tocan la web).
 
 ## Pendientes
 - ✅ Ninguno urgente
