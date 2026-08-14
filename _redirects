@@ -4,25 +4,7 @@
 # Redirigir legales
 /legal/politica-cookies.html /legal/politica-cookies 301
 /legal/aviso-legal.html /legal/aviso-legal 301
-/legal/privacidad.html /legal/privacidad 301
-
-# --- Limpieza de URLs antiguas / rutas que ya no existen (404 -> redirigir a sección real) ---
-# Cualquier ruta vieja de una sección que no exista -> redirige a su sección principal
-/seguro-vida/* /seguro-vida/ 301
-/seguro-salud/* /seguro-salud/ 301
-/seguro-hogar/* /seguro-hogar/ 301
-/seguro-ahorro/* /seguros/ 301
-/seguro-empresas/* /empresas-autonomos/ 301
-/empresas-autonomos/* /empresas-autonomos/ 301
-/ahorro-inversion/* /ahorro-inversion/ 301
-/productos-financieros/* /productos-financieros/ 301
-/hipotecas/* /hipotecas/ 301
-/seguros/* /seguros/ 301
-/viajes/* /viajes/ 301
-/coches/* /coches/ 301
-/estudiar-espana/* /estudiar-espana/ 301
-/formacion/* /formacion/ 301
-/presupuesto/* /presupuesto/ 301
+/legal/politica-privacidad.html /legal/politica-privacidad 301
 
 # Rutas antiguas de paginas simples que tenian .html y ya no existen -> home
 /sobre-mi.html /sobre-mi/ 301
