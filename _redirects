@@ -7,6 +7,7 @@
 /legal/politica-privacidad.html /legal/politica-privacidad 301
 
 # Rutas antiguas de paginas simples que tenian .html y ya no existen -> home
+/hipotecas/fija-vs-variable-2026.html /hipotecas/fija-vs-variable.html 301
 /sobre-mi.html /sobre-mi/ 301
 /legal.html /legal/aviso-legal 301
 /contacto.html /contacto/ 301
