@@ -14,3 +14,6 @@
 /faq.html /faq/ 301
 /articulos.html /blog/ 301
 /guia-autonomos.html /empresas-autonomos/ 301
+
+# Arreglo duplicados hipotecas (SEO)
+/hipotecas/hipoteca-para-jovenes-2026.html /hipotecas/hipoteca-joven.html 301

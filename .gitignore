@@ -1,0 +1,6 @@
+# Backups y artefactos locales — no subir al despliegue
+_backup_*/
+backup_*/
+preview/
+*.bak
+*.bak_*
