@@ -13,51 +13,76 @@
   .hero p{color:rgba(255,255,255,0.9);max-width:720px;margin:0 auto 22px;font-size:1.05em;}
   .hero .buy-btn{display:inline-block;background:#f5a623;color:#0f3d2e;font-weight:700;padding:14px 30px;border-radius:8px;text-decoration:none;font-size:1.05em;}
   .hero .buy-btn:hover{background:#ffb84d;}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;padding:40px 20px;max-width:1200px;margin:0 auto;}
-  .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:24px;box-shadow:0 2px 10px rgba(0,0,0,0.05);display:flex;flex-direction:column;}
-  .card h2{margin:0 0 6px;font-size:1.35em;color:#111827;}
-  .card .autor{color:#6b7280;font-size:0.9em;margin-bottom:10px;}
-  .card p{color:#374151;font-size:0.95em;line-height:1.5;flex:1;}
-  .card .btn{display:block;background:#166534;color:#fff;text-align:center;padding:12px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:14px;}
-  .card .btn:hover{background:#0f3d2e;}
-  .nota{text-align:center;color:#6b7280;font-size:0.85em;padding:0 20px 40px;max-width:760px;margin:0 auto;}
+  /* Hub visual circular */
+  .hub{padding:38px 20px 10px;max-width:1200px;margin:0 auto;}
+  .hub .hub-tit{color:#166534;font-size:1.8em;font-weight:800;text-align:center;margin:0 0 8px;}
+  .hub .hub-sub{text-align:center;color:#374151;font-size:0.97em;margin:0 auto 26px;max-width:640px;}
+  .hub .hub-grid{display:flex;flex-wrap:wrap;justify-content:center;}
+  .hub .chip{display:inline-flex;align-items:center;text-decoration:none;margin:12px 13px;padding:9px 16px 9px 9px;
+            background:#fff;border:1px solid #e2e8f0;border-radius:44px;box-shadow:0 2px 8px rgba(0,0,0,.08);
+            transition:transform .12s, box-shadow .12s;font-family:inherit;}
+  .hub .chip:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.14);}
+  .hub .dot{width:46px;height:46px;border-radius:50%;flex:0 0 46px;display:inline-flex;align-items:center;justify-content:center;
+            color:#fff;font-weight:900;font-size:14px;margin-right:11px;letter-spacing:.3px;}
+  .hub .chip b{display:block;font-size:15px;color:#111827;line-height:1.15;}
+  .hub .dot.bbva{flex-basis:58px;width:58px;font-size:13px;letter-spacing:0;font-weight:800;}
+  .hub .chip small{display:block;color:#6b7280;font-size:11px;font-weight:600;margin-top:2px;}
+  .dc1{background:#166534}.dc2{background:#1d4ed8}.dc3{background:#b45309}.dc4{background:#7c3aed}.dc5{background:#0891b2}.dc6{background:#be123c}.dc7{background:#15803d}.dc8{background:#4338ca}.dc9{background:#a21caf}.dcA{background:#0f766e}.dcB{background:#c2410c}
+  /* Acordeones SEO (opción 1) */
+  .faq{padding:14px 20px 20px;max-width:1000px;margin:0 auto;}
+  .faq-tit{color:#166534;font-size:1.4em;font-weight:800;text-align:center;margin:26px 0 20px;}
+  details.det{background:#fff;border:1px solid #e5e7eb;border-radius:12px;margin:0 0 12px;box-shadow:0 1px 4px rgba(0,0,0,.04);overflow:hidden;}
+  details.det summary{cursor:pointer;list-style:none;padding:16px 20px;font-weight:700;font-size:1.08em;color:#111827;display:flex;align-items:center;gap:10px;}
+  details.det summary::-webkit-details-marker{display:none;}
+  details.det summary .arr{margin-left:auto;color:#166534;transition:transform .15s;}
+  details.det[open] summary .arr{transform:rotate(180deg);}
+  details.det .body{padding:14px 20px 20px;color:#374151;line-height:1.6;font-size:0.96em;border-top:1px solid #f3f4f6;}
+  details.det .body p{margin:0 0 10px;}
+  details.det .sol{display:inline-block;background:#166534;color:#fff;font-weight:600;padding:10px 18px;border-radius:8px;text-decoration:none;margin-top:6px;}
+  details.det .sol:hover{background:#0f3d2e;}
+  .nota{text-align:center;color:#6b7280;font-size:0.84em;padding:20px 20px 40px;max-width:800px;margin:0 auto;line-height:1.6;}
 </style>
 </head>
 <body>
 <div class="hero">
   <h1>🏦 Cuentas bancarias y nómina sin comisiones</h1>
   <p>Compara las mejores cuentas para tu día a día: sin comisiones, con rentabilidad y bonificaciones por domiciliar tu nómina. Elige la que mejor encaja contigo y ábrela en minutos desde el móvil.</p>
-  <a href="#" class="buy-btn" onclick="return false;">💶 Comparar cuentas nómina →</a>
+  <a href="#productos" class="buy-btn">💶 Comparar cuentas ahora →</a>
 </div>
 
-<div class="grid">
-  <div class="card">
-    <h2>📖 Las mejores cuentas de nómina 2026</h2>
-    <div class="autor">Guía comparativa · Actualizado 2026</div>
-    <p>Comparativa de las mejores cuentas de nómina sin comisiones: Bankinter, BBVA, Abanca y cómo elegir la tuya para sacarle partido a tu sueldo.</p>
-    <a href="/bancos/mejores-cuentas-nomina-2026.html" class="btn">Leer la guía →</a>
+<div class="hub" id="productos">
+  <h2 class="hub-tit">💳 Todas las cuentas, de un vistazo</h2>
+  <p class="hub-sub">Elige la que mejor encaje contigo. Cada pastilla te lleva directo a su sitio oficial. Pulsa "Más información" para ver cada detalle.</p>
+  <div class="hub-grid">
+    <a class="chip" href="https://go.adt284.net/t/t?a=2010262552&as=2102878414&t=2&tk=1" rel="nofollow sponsored" target="_blank" rel="noopener"><span class="dot dc2 bbva">BBVA</span><span><b>BBVA</b><small>Cuenta Online · regalo 1.060€</small></span></a>
+    <a class="chip" href="https://go.adt246.net/t/t?a=1897485368&as=2102878414&t=2&tk=1" rel="nofollow sponsored" target="_blank" rel="noopener"><span class="dot dc3">AB</span><span><b>Abanca</b><small>Cuenta Clara · regalo 670€</small></span></a>
+    <a class="chip" href="https://go.adt253.net/t/t?a=2028088229&as=2102878414&t=2&tk=1" rel="nofollow sponsored" target="_blank" rel="noopener"><span class="dot dc4">bu</span><span><b>bunq</b><small>Banco online</small></span></a>
+    <a class="chip" href="https://go.adt231.net/t/t?a=2001696505&as=2102878414&t=2&tk=1" rel="nofollow sponsored" target="_blank" rel="noopener"><span class="dot dc5">Fe</span><span><b>Ferratum</b><small>Ahorro 3-3,4%</small></span></a>
   </div>
+</div>
 
-  <div class="card">
-    <h2>Bankinter</h2>
-    <div class="autor">Cuenta Nómina · Hasta 60€</div>
-    <p>Una de las cuentas nómina mejor valoradas en España. Sin comisiones de mantenimiento y con bonificación por domiciliar tu nómina. Ideal para quien cobra su sueldo cada mes.</p>
-    <a href="#" class="btn" onclick="return false;">Abrir cuenta en Bankinter 🏦</a>
-  </div>
+<div class="faq">
+  <h2 class="faq-tit">📖 Más información de cada cuenta</h2>
 
-  <div class="card">
-    <h2>BBVA</h2>
-    <div class="autor">Cuenta online · Hasta 45€</div>
-    <p>Cuenta online sin comisiones con una app muy completa. Domicilia tu nómina y consigue ventajas y bonificaciones cada mes. Perfecta para gestionar todo desde el móvil.</p>
-    <a href="#" class="btn" onclick="return false;">Abrir cuenta en BBVA 🏦</a>
-  </div>
+  <details class="det"><summary>BBVA — Cuenta Online sin comisiones · hasta 1.060€ de regalo por traer tu nómina <span class="arr">▼</span></summary><div class="body">
+    <p>Cuenta online y tarjeta de débito por 0€, sin comisiones. Hasta 1.060€ de abono el primer año para nuevos clientes y hasta 660€ por traer amigos. Transferencias y retiradas de efectivo gratuitas. Alta online en pocos minutos con un selfie.</p>
+    <a class="sol" href="https://go.adt284.net/t/t?a=2010262552&as=2102878414&t=2&tk=1" rel="nofollow sponsored" target="_blank">Abrir cuenta en BBVA →</a>
+  </div></details>
 
-  <div class="card">
-    <h2>Abanca</h2>
-    <div class="autor">Cuenta y ahorro · Hasta 40€</div>
-    <p>Cuenta sin comisiones con opciones de ahorro atractivas. Buena para llevar tu dinero del día a día y apartar tu ahorro, todo en una misma entidad.</p>
-    <a href="#" class="btn" onclick="return false;">Abrir cuenta en Abanca 🏦</a>
-  </div>
+  <details class="det"><summary>Abanca (Cuenta Clara) — para autónomos · hasta 670€ de regalo por domiciliar tu cuota <span class="arr">▼</span></summary><div class="body">
+    <p>Cuenta Clara de Abanca para autónomos: hasta 670€ por domiciliar la cuota de autónomo (370€ brutos por la cuota) y hasta 300€ de remuneración el primer año para saldos hasta 15.000€ (2% TAE). Sin comisiones, con tarjeta de débito y crédito gratuitas y alta online en solo 10 minutos.</p>
+    <a class="sol" href="https://go.adt246.net/t/t?a=1897485368&as=2102878414&t=2&tk=1" rel="nofollow sponsored" target="_blank">Abrir cuenta en Abanca →</a>
+  </div></details>
+
+  <details class="det"><summary>bunq — banco online, cuenta en 5 minutos <span class="arr">▼</span></summary><div class="body">
+    <p>Banco 100% online: cuenta y tarjeta gratuitas en 5 minutos, banca personal y de empresa, puntos canjeables por usar la tarjeta y compraventa de cripto segura. Los estudiantes disfrutan del plan bunq Pro gratis mientras estudian, con hasta 25 cuentas con IBAN, 3,01% de interés en ahorros y transferencias de divisas gratis.</p>
+    <a class="sol" href="https://go.adt253.net/t/t?a=2028088229&as=2102878414&t=2&tk=1" rel="nofollow sponsored" target="_blank">Abrir cuenta en bunq →</a>
+  </div></details>
+
+  <details class="det"><summary>Ferratum — cuenta de ahorro y depósito, 3,00% – 3,40% TAE <span class="arr">▼</span></summary><div class="body">
+    <p>Ferratum ofrece una cuenta de ahorro y depósitos a plazo fijo con intereses del 3,00% al 3,40% TAE para rentabilizar tus ahorros. El pago de intereses en bruto se ingresa directamente en la cuenta de ahorro y el banco está adherido al Fondo de Garantía de Depósitos.</p>
+    <a class="sol" href="https://go.adt231.net/t/t?a=2001696505&as=2102878414&t=2&tk=1" rel="nofollow sponsored" target="_blank">Abrir cuenta en Ferratum →</a>
+  </div></details>
 </div>
 
 <p class="nota">* Como afiliados, podemos recibir una comisión si abres una cuenta a través de nuestros enlaces, sin coste adicional para ti. Las condiciones y bonificaciones pueden variar; revisa cada oferta en su web oficial antes de contratar.</p>
