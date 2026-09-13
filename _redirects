@@ -18,3 +18,20 @@
 # Arreglo duplicados hipotecas (SEO)
 /hipotecas/hipoteca-para-jovenes-2026.html /hipotecas/hipoteca-joven.html 301
 /hipotecas/guia-para-comprar-tu-primera-vivienda.html /hipotecas/primera-vivienda.html 301
+
+# 🛡️ BLINDAJE CONTRA RUTAS EN CASCADA (routes anidadas mal formadas, ej. /ahorro-inversion/formacion/hipotecas/...)
+# Cualquier URL con 2+ segmentos conocidos anidados que no exista -> redirigir a su seccion raiz real
+/ahorro-inversion/*/hipotecas/* /hipotecas/ 301
+/ahorro-inversion/*/coches/* /coches/ 301
+/ahorro-inversion/*/seguros/* /seguros/ 301
+/ahorro-inversion/*/viajes/* /viajes/ 301
+/ahorro-inversion/*/formacion/* /formacion/ 301
+/ahorro-inversion/*/estudiar-espana/* /estudiar-espana/ 301
+/seguro-vida/*/coches/* /coches/ 301
+/seguro-vida/*/hipotecas/* /hipotecas/ 301
+/seguro-vida/*/estudiar-espana/* /estudiar-espana/ 301
+/seguro-vida/*/productos-financieros/* /productos-financieros/ 301
+/contacto/*/estudiar-espana/* /estudiar-espana/ 301
+/contacto/*/viajes/* /viajes/ 301
+/legal/*/estudiar-espana/* /estudiar-espana/ 301
+/*/estudiar-espana/estudiar-espana/* /estudiar-espana/ 301
