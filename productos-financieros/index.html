@@ -80,5 +80,67 @@
     <p>© 2026 Crecimiento Financiero Global</p>
   </div>
 </footer>
+<!-- CAPTURA-EMAILS-INICIO -->
+<div class="cfg-captura" id="cfg-captura">
+  <div class="cfg-captura-in">
+    <div class="cfg-captura-txt">
+      <strong>Te aviso cuando salga algo mejor</strong>
+      <span>Déjame tu email y te escribo solo cuando haya una oferta que merezca la pena. Sin spam.</span>
+    </div>
+    <form class="cfg-captura-form" id="cfg-captura-form">
+      <input type="email" id="cfg-captura-email" name="email" placeholder="tu@email.com" required>
+      <button type="submit" id="cfg-captura-btn">Avísame</button>
+    </form>
+    <p class="cfg-captura-ok" id="cfg-captura-ok" style="display:none">✓ Apuntado. Te escribiré cuando haya novedades.</p>
+    <p class="cfg-captura-legal">Al dejar tu email aceptas recibir información de Crecimiento Financiero Global. Puedes darte de baja cuando quieras.</p>
+  </div>
+</div>
+<style>
+.cfg-captura{background:linear-gradient(135deg,#0f3d2e,#166534);padding:26px 20px;margin:30px 0;}
+.cfg-captura-in{max-width:820px;margin:0 auto;text-align:center;}
+.cfg-captura-txt{color:#fff;margin-bottom:14px;}
+.cfg-captura-txt strong{display:block;font-size:1.25em;margin-bottom:4px;}
+.cfg-captura-txt span{font-size:0.92em;color:#d1fae5;}
+.cfg-captura-form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.cfg-captura-form input{flex:1 1 260px;max-width:340px;padding:13px 16px;border:none;border-radius:8px;font-size:1em;font-family:inherit;}
+.cfg-captura-form button{background:#f5a623;color:#0f3d2e;font-weight:700;border:none;border-radius:8px;padding:13px 26px;font-size:1em;cursor:pointer;font-family:inherit;}
+.cfg-captura-form button:hover{background:#ffb84d;}
+.cfg-captura-form button:disabled{opacity:.65;cursor:default;}
+.cfg-captura-ok{color:#bbf7d0;font-weight:700;margin:12px 0 0;}
+.cfg-captura-legal{color:#a7f3d0;font-size:0.76em;margin:10px 0 0;opacity:.85;}
+</style>
+<script>
+(function(){
+  var f=document.getElementById('cfg-captura-form');
+  if(!f) return;
+  f.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var btn=document.getElementById('cfg-captura-btn');
+    var email=document.getElementById('cfg-captura-email').value;
+    btn.disabled=true; btn.textContent='Enviando...';
+    try{
+      var r=await fetch('https://api.web3forms.com/submit',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+          access_key:'58b165d2-318b-4718-bb6a-9b46dbb4540d',
+          subject:'Nuevo suscriptor CFG: '+email,
+          email:email,
+          message:'Nuevo email captado en: '+location.href,
+          tipo:'suscripcion'
+        })
+      });
+      if(r.ok){
+        f.style.display='none';
+        document.getElementById('cfg-captura-ok').style.display='block';
+      } else { throw new Error('fail'); }
+    }catch(err){
+      alert('No se pudo enviar. Inténtalo de nuevo.');
+      btn.disabled=false; btn.textContent='Avísame';
+    }
+  });
+})();
+</script>
+<!-- CAPTURA-EMAILS-FIN -->
 </body>
 </html>
