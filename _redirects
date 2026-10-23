@@ -12,10 +12,18 @@
 /legal/aviso-legal.html /legal/aviso-legal 301
 /legal/politica-privacidad.html /legal/politica-privacidad 301
 
-# Duplicados hipotecas
-/hipotecas/fija-vs-variable-2026.html /hipotecas/fija-vs-variable.html 301
-/hipotecas/hipoteca-para-jovenes-2026.html /hipotecas/hipoteca-joven.html 301
-/hipotecas/guia-para-comprar-tu-primera-vivienda.html /hipotecas/primera-vivienda.html 301
+# Duplicados hipotecas -> la buena es hipoteca-jovenes-2026
+/hipotecas/hipoteca-joven.html /hipotecas/hipoteca-jovenes-2026 301
+/hipotecas/hipoteca-para-jovenes-2026.html /hipotecas/hipoteca-jovenes-2026 301
+/hipotecas/hipoteca-para-jovenes-2026 /hipotecas/hipoteca-jovenes-2026 301
+/hipotecas/fija-vs-variable-2026.html /hipotecas/fija-vs-variable 301
+/hipotecas/guia-para-comprar-tu-primera-vivienda.html /hipotecas/primera-vivienda 301
+
+# Borradores publicados por error
+/index-v2.html /           301
+/index-v2 /                301
+/contenido_articulo_cfg.html /  301
+/contenido_articulo_cfg /       301
 
 # 🛡️ RUTAS EN CASCADA: cualquier 2º segmento que sea una SECCIÓN conocida se anula
 # (Cloudflare Pages aplica la primera regla que coincide, splat al final)
