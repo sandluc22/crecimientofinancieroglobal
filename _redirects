@@ -99,3 +99,8 @@
 /blog-viajar-barato /blog/viajar-barato-2026 301
 # ==== Cadenas fantasma: cualquier URL con 3+ segmentos -> home ====
 /:a/:b/:c/* / 301
+
+# Landing Mi Guia Espana
+/guia /guia/ 301
+/mi-guia-espana /guia/ 301
+/mi-guia-espana/ /guia/ 301
