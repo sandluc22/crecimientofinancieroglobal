@@ -71,3 +71,31 @@
 /ir/ferratum      https://go.adt231.net/t/t?a=2001696505&as=2102878414&t=2&tk=1   302
 /ir/bancos        /bancos/                                                        302
 /ir/bankinter     https://go.adt228.com/t/t?a=1962046845&as=2102878414&t=2&tk=1  302
+
+# ==== Limpieza 2026-11-07: 404 activos y cadenas fantasma ====
+# /legal/ (carpeta sin index) -> aviso legal
+/legal /legal/aviso-legal 301
+/legal/ /legal/aviso-legal 301
+/legal/privacidad.html /legal/politica-privacidad 301
+/legal/privacidad /legal/politica-privacidad 301
+# /seguro-empresas/ (sin contenido) -> empresas y autonomos
+/seguro-empresas /empresas-autonomos/ 301
+/seguro-empresas/ /empresas-autonomos/ 301
+/seguro-empresas/* /empresas-autonomos/ 301
+# ==== Articulos viejos en la raiz -> su version en /blog/ ====
+/blog-errores-hipoteca.html /blog/errores-hipoteca 301
+/blog-errores-hipoteca /blog/errores-hipoteca 301
+/blog-metodo-50-30-20.html /blog/metodo-50-30-20 301
+/blog-metodo-50-30-20 /blog/metodo-50-30-20 301
+/blog-elegir-banco.html /blog/elegir-banco-2026 301
+/blog-elegir-banco /blog/elegir-banco-2026 301
+/blog-coche-nuevo-segunda-mano.html /blog/coche-nuevo-vs-segunda-mano 301
+/blog-coche-nuevo-segunda-mano /blog/coche-nuevo-vs-segunda-mano 301
+/blog-primeros-pasos-espana.html /blog/primeros-pasos-espana-extranjero 301
+/blog-primeros-pasos-espana /blog/primeros-pasos-espana-extranjero 301
+/blog-seguros-imprescindibles.html /blog/seguros-imprescindibles-familia 301
+/blog-seguros-imprescindibles /blog/seguros-imprescindibles-familia 301
+/blog-viajar-barato.html /blog/viajar-barato-2026 301
+/blog-viajar-barato /blog/viajar-barato-2026 301
+# ==== Cadenas fantasma: cualquier URL con 3+ segmentos -> home ====
+/:a/:b/:c/* / 301
